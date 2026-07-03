@@ -1,0 +1,64 @@
+name: Test pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages-test
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build static test site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Build static files
+        run: |
+          mkdir -p _site
+          cp -a ./*.html _site/
+
+          for path in css js images videos; do
+            if [ -e "$path" ]; then
+              cp -a "$path" "_site/$path"
+            fi
+          done
+
+          mkdir -p _site/data _site/includes
+          cp data/strings.json _site/data/
+          cp includes/collections.json _site/includes/
+          cp includes/merchandise.json _site/includes/
+          cp includes/passes.json _site/includes/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy static test site
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
