@@ -21,10 +21,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Check FTP configuration
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          missing=0
+          for name in FTP_SERVER FTP_USERNAME FTP_PASSWORD; do
+            if [ -z "${!name}" ]; then
+              echo "::error title=Missing FTP configuration::$name is not configured in GitHub Actions secrets or variables."
+              missing=1
+            fi
+          done
+          exit "$missing"
+
       - name: Upload files
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_SERVER || vars.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
