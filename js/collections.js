@@ -513,8 +513,11 @@ function renderCollections() {
     if (!container) return;
 
     const cards = [];
+    const collectionLimit = Number(container.dataset.limit || 0);
 
     Object.keys(collections).forEach((key) => {
+        if (collectionLimit > 0 && cards.length >= collectionLimit) return;
+
         const collection = collections[key];
         if (!collection.active || collection.mode !== currentMode) return;
 
