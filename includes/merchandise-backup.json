@@ -1,0 +1,860 @@
+{
+    "merchandise":  {
+                        "Strings":  {
+                                         "active":  true,
+                                         "mode":  "miss",
+                                         "category":  "lingerie",
+                                         "title":  {
+                                                       "nl":  "String",
+                                                       "en":  "Thong",
+                                                       "fr":  "String",
+                                                       "de":  "String"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Kies je favoriete kleur en extra opties",
+                                                             "en":  "Choose your favorite color and extra options",
+                                                             "fr":  "Choisissez votre couleur préférée et options supplémentaires",
+                                                             "de":  "Wähle deine Lieblingsfarbe und zusätzliche Optionen"
+                                                         },
+                                         "image":  "../images/merchandise/string1.jpeg",
+                                         "price":  15.00,
+                                         "colorOptions":  [
+                                             {"id": "roze", "label": {"nl": "Roze", "en": "Pink", "fr": "Rose", "de": "Rosa"}, "image": "../images/merchandise/string1.jpeg"},
+                                             {"id": "zwart", "label": {"nl": "Zwart", "en": "Black", "fr": "Noir", "de": "Schwarz"}, "image": "../images/merchandise/string2.jpeg"},
+                                             {"id": "wit", "label": {"nl": "Wit", "en": "White", "fr": "Blanc", "de": "Weiß"}, "image": "../images/merchandise/string3.jpeg"},
+                                             {"id": "rood", "label": {"nl": "Rood", "en": "Red", "fr": "Rouge", "de": "Rot"}, "image": "../images/merchandise/string4.jpeg"},
+                                             {"id": "blauw", "label": {"nl": "Blauw", "en": "Blue", "fr": "Bleu", "de": "Blau"}, "image": "../images/merchandise/string5.jpeg"},
+                                             {"id": "groen", "label": {"nl": "Groen", "en": "Green", "fr": "Vert", "de": "Grün"}, "image": "../images/merchandise/string6.jpeg"},
+                                             {"id": "paars", "label": {"nl": "Paars", "en": "Purple", "fr": "Violet", "de": "Lila"}, "image": "../images/merchandise/string1.jpeg"},
+                                             {"id": "geel", "label": {"nl": "Geel", "en": "Yellow", "fr": "Jaune", "de": "Gelb"}, "image": "../images/merchandise/string8.jpeg"},
+                                             {"id": "oranje", "label": {"nl": "Oranje", "en": "Orange", "fr": "Orange", "de": "Orange"}, "image": "../images/merchandise/string9.jpeg"},
+                                             {"id": "grijs", "label": {"nl": "Grijs", "en": "Gray", "fr": "Gris", "de": "Grau"}, "image": "../images/merchandise/string10.jpeg"},
+                                             {"id": "beige", "label": {"nl": "Beige", "en": "Beige", "fr": "Beige", "de": "Beige"}, "image": "../images/merchandise/string11.jpg"},
+                                             {"id": "bruin", "label": {"nl": "Bruin", "en": "Brown", "fr": "Marron", "de": "Braun"}, "image": "../images/merchandise/string12.jpg"},
+                                             {"id": "zilver", "label": {"nl": "Zilver", "en": "Silver", "fr": "Argent", "de": "Silber"}, "image": "../images/merchandise/string13.jpg"}
+                                         ],
+                                         "options":  [
+                                             {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                                             {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                                             {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                                             {"id": "video", "label": {"nl": "Video", "en": "Video", "fr": "Vidéo", "de": "Video"}, "price": 25.00}
+                                         ]
+                                     },
+                                         "active":  true,
+                                         "mode":  "miss",
+                                         "category":  "lingerie",
+                                         "title":  {
+                                                       "nl":  "String Roze",
+                                                       "en":  "Thong Pink",
+                                                       "fr":  "String Rose",
+                                                       "de":  "String Rosa"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Roze string van premium kwaliteit",
+                                                             "en":  "Pink thong of premium quality",
+                                                             "fr":  "String rose de qualité supérieure",
+                                                             "de":  "Rosa String in Premium-Qualität"
+                                                         },
+                                         "image":  "../images/merchandise/string1.jpeg",
+                                         "price":  15.00,
+                                         "options":  [
+                                             {
+                                                 "id": "gedragen",
+                                                 "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"},
+                                                 "price": 10.00
+                                             },
+                                             {
+                                                 "id": "plas",
+                                                 "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"},
+                                                 "price": 15.00
+                                             },
+                                             {
+                                                 "id": "squirt",
+                                                 "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"},
+                                                 "price": 20.00
+                                             },
+                                             {
+                                                 "id": "video_plas",
+                                                 "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"},
+                                                 "price": 25.00
+                                             },
+                                             {
+                                                 "id": "video_squirt",
+                                                 "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"},
+                                                 "price": 30.00
+                                             }
+                                         ]
+                                     },
+                        "String 2":  {
+                                         "active":  true,
+                                         "mode":  "miss",
+                                         "category":  "lingerie",
+                                         "title":  {
+                                                       "nl":  "String Zwart",
+                                                       "en":  "Thong Black",
+                                                       "fr":  "String Noir",
+                                                       "de":  "String Schwarz"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Zwarte string met exclusief design",
+                                                             "en":  "Black thong with exclusive design",
+                                                             "fr":  "String noir avec design exclusif",
+                                                             "de":  "Schwarzer String mit exklusivem Design"
+                                                         },
+                                         "image":  "../images/merchandise/string2.jpeg",
+                                         "price":  15.00,
+                                         "options":  [
+                                             {
+                                                 "id": "gedragen",
+                                                 "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"},
+                                                 "price": 10.00
+                                             },
+                                             {
+                                                 "id": "plas",
+                                                 "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"},
+                                                 "price": 15.00
+                                             },
+                                             {
+                                                 "id": "squirt",
+                                                 "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"},
+                                                 "price": 20.00
+                                             },
+                                             {
+                                                 "id": "video_plas",
+                                                 "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"},
+                                                 "price": 25.00
+                                             },
+                                             {
+                                                 "id": "video_squirt",
+                                                 "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"},
+                                                 "price": 30.00
+                                             }
+                                         ]
+                                     },
+                        "String 3":  {
+                                         "active":  true,
+                                         "mode":  "miss",
+                                         "category":  "lingerie",
+                                         "title":  {
+                                                       "nl":  "String Wit",
+                                                       "en":  "Thong White",
+                                                       "fr":  "String Blanc",
+                                                       "de":  "String Weiß"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Witte string voor elegante uitstraling",
+                                                             "en":  "White thong for elegant appearance",
+                                                             "fr":  "String blanc pour une apparence raffinée",
+                                                             "de":  "Weißer String für elegante Ausstrahlung"
+                                                         },
+                                         "image":  "../images/merchandise/string3.jpeg",
+                                         "price":  15.00,
+                                         "options":  [
+                                             {
+                                                 "id": "gedragen",
+                                                 "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"},
+                                                 "price": 10.00
+                                             },
+                                             {
+                                                 "id": "plas",
+                                                 "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"},
+                                                 "price": 15.00
+                                             },
+                                             {
+                                                 "id": "squirt",
+                                                 "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"},
+                                                 "price": 20.00
+                                             },
+                                             {
+                                                 "id": "video_plas",
+                                                 "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"},
+                                                 "price": 25.00
+                                             },
+                                             {
+                                                 "id": "video_squirt",
+                                                 "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"},
+                                                 "price": 30.00
+                                             }
+                                         ]
+                                     },
+                        "String 4":  {
+                                         "active":  true,
+                                         "mode":  "miss",
+                                         "category":  "lingerie",
+                                         "title":  {
+                                                       "nl":  "String Rood",
+                                                       "en":  "Thong Red",
+                                                       "fr":  "String Rouge",
+                                                       "de":  "String Rot"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Rode string met perfecte pasvorm",
+                                                             "en":  "Red thong with perfect fit",
+                                                             "fr":  "String rouge avec ajustement parfait",
+                                                             "de":  "Roter String mit perfekter Passform"
+                                                         },
+                                         "image":  "../images/merchandise/string4.jpeg",
+                                         "price":  15.00,
+                                         "options":  [
+                                             {
+                                                 "id": "gedragen",
+                                                 "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"},
+                                                 "price": 10.00
+                                             },
+                                             {
+                                                 "id": "plas",
+                                                 "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"},
+                                                 "price": 15.00
+                                             },
+                                             {
+                                                 "id": "squirt",
+                                                 "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"},
+                                                 "price": 20.00
+                                             },
+                                             {
+                                                 "id": "video_plas",
+                                                 "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"},
+                                                 "price": 25.00
+                                             },
+                                             {
+                                                 "id": "video_squirt",
+                                                 "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"},
+                                                 "price": 30.00
+                                             }
+                                         ]
+                                     },
+                        "String 5":  {
+                                         "active":  true,
+                                         "mode":  "miss",
+                                         "category":  "lingerie",
+                                         "title":  {
+                                                       "nl":  "String Blauw",
+                                                       "en":  "Thong Blue",
+                                                       "fr":  "String Bleu",
+                                                       "de":  "String Blau"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Blauwe string met verfijnd design",
+                                                             "en":  "Blue thong with refined design",
+                                                             "fr":  "String bleu avec design raffiné",
+                                                             "de":  "Blauer String mit raffiniertem Design"
+                                                         },
+                                         "image":  "../images/merchandise/string5.jpeg",
+                                         "price":  15.00,
+                                         "options":  [
+                                             {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                                             {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                                             {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                                             {"id": "video_plas", "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"}, "price": 25.00},
+                                             {"id": "video_squirt", "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"}, "price": 30.00}
+                                         ]
+                                     },
+                        "String 6":  {
+                                         "active":  true,
+                                         "mode":  "miss",
+                                         "category":  "lingerie",
+                                         "title":  {
+                                                       "nl":  "String Groen",
+                                                       "en":  "Thong Green",
+                                                       "fr":  "String Vert",
+                                                       "de":  "String Grün"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Groene string voor speciale gelegenheden",
+                                                             "en":  "Green thong for special occasions",
+                                                             "fr":  "String vert pour occasions spéciales",
+                                                             "de":  "Grüner String für besondere Anlässe"
+                                                         },
+                                         "image":  "../images/merchandise/string6.jpeg",
+                                         "price":  15.00,
+                                         "options":  [
+                                             {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                                             {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                                             {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                                             {"id": "video_plas", "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"}, "price": 25.00},
+                                             {"id": "video_squirt", "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"}, "price": 30.00}
+                                         ]
+                                     },
+                        "String 7":  {
+                                         "active":  true,
+                                         "mode":  "miss",
+                                         "category":  "lingerie",
+                                         "title":  {
+                                                       "nl":  "String Paars",
+                                                       "en":  "Thong Purple",
+                                                       "fr":  "String Violet",
+                                                       "de":  "String Lila"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Paarse string met sensuele uitstraling",
+                                                             "en":  "Purple thong with sensual appearance",
+                                                             "fr":  "String violet avec apparence sensuelle",
+                                                             "de":  "Lila String mit sinnlicher Ausstrahlung"
+                                                         },
+                                         "image":  "../images/merchandise/string1.jpeg",
+                                         "price":  15.00,
+                                         "options":  [
+                                             {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                                             {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                                             {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                                             {"id": "video_plas", "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"}, "price": 25.00},
+                                             {"id": "video_squirt", "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"}, "price": 30.00}
+                                         ]
+                                     },
+                        "String 8":  {
+                                         "active":  true,
+                                         "mode":  "miss",
+                                         "category":  "lingerie",
+                                         "title":  {
+                                                       "nl":  "String Geel",
+                                                       "en":  "Thong Yellow",
+                                                       "fr":  "String Jaune",
+                                                       "de":  "String Gelb"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Gele string met hoogwaardige afwerking",
+                                                             "en":  "Yellow thong with high-quality finish",
+                                                             "fr":  "String jaune avec finition de haute qualité",
+                                                             "de":  "Gelber String mit hochwertiger Verarbeitung"
+                                                         },
+                                         "image":  "../images/merchandise/string8.jpeg",
+                                         "price":  15.00,
+                                         "options":  [
+                                             {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                                             {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                                             {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                                             {"id": "video_plas", "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"}, "price": 25.00},
+                                             {"id": "video_squirt", "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"}, "price": 30.00}
+                                         ]
+                                     },
+                        "String 9":  {
+                                         "active":  true,
+                                         "mode":  "miss",
+                                         "category":  "lingerie",
+                                         "title":  {
+                                                       "nl":  "String Oranje",
+                                                       "en":  "Thong Orange",
+                                                       "fr":  "String Orange",
+                                                       "de":  "String Orange"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Oranje string met modern design",
+                                                             "en":  "Orange thong with modern design",
+                                                             "fr":  "String orange avec design moderne",
+                                                             "de":  "Oranger String mit modernem Design"
+                                                         },
+                                         "image":  "../images/merchandise/string9.jpeg",
+                                         "price":  15.00,
+                                         "options":  [
+                                             {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                                             {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                                             {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                                             {"id": "video_plas", "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"}, "price": 25.00},
+                                             {"id": "video_squirt", "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"}, "price": 30.00}
+                                         ]
+                                     },
+                        "String 10":  {
+                                          "active":  true,
+                                          "mode":  "miss",
+                                          "category":  "lingerie",
+                                          "title":  {
+                                                        "nl":  "String Grijs",
+                                                        "en":  "Thong Gray",
+                                                        "fr":  "String Gris",
+                                                        "de":  "String Grau"
+                                                    },
+                                          "description":  {
+                                                              "nl":  "Grijze string met subtiele details",
+                                                              "en":  "Gray thong with subtle details",
+                                                              "fr":  "String gris avec détails subtils",
+                                                              "de":  "Grauer String mit subtilen Details"
+                                                          },
+                                          "image":  "../images/merchandise/string10.jpeg",
+                                          "price":  15.00,
+                                          "options":  [
+                                              {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                                              {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                                              {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                                              {"id": "video_plas", "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"}, "price": 25.00},
+                                              {"id": "video_squirt", "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"}, "price": 30.00}
+                                          ]
+                                      },
+                        "String 11":  {
+                                          "active":  true,
+                                          "mode":  "miss",
+                                          "category":  "lingerie",
+                                          "title":  {
+                                                        "nl":  "String Beige",
+                                                        "en":  "Thong Beige",
+                                                        "fr":  "String Beige",
+                                                        "de":  "String Beige"
+                                                    },
+                                          "description":  {
+                                                              "nl":  "Beige string met perfecte pasvorm",
+                                                              "en":  "Beige thong with perfect fit",
+                                                              "fr":  "String beige avec ajustement parfait",
+                                                              "de":  "Beige String mit perfekter Passform"
+                                                          },
+                                          "image":  "../images/merchandise/string11.jpg",
+                                          "price":  15.00,
+                                          "options":  [
+                                              {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                                              {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                                              {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                                              {"id": "video_plas", "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"}, "price": 25.00},
+                                              {"id": "video_squirt", "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"}, "price": 30.00}
+                                          ]
+                                      },
+                        "String 12":  {
+                                          "active":  true,
+                                          "mode":  "miss",
+                                          "category":  "lingerie",
+                                          "title":  {
+                                                        "nl":  "String Bruin",
+                                                        "en":  "Thong Brown",
+                                                        "fr":  "String Marron",
+                                                        "de":  "String Braun"
+                                                    },
+                                          "description":  {
+                                                              "nl":  "Bruine string met elegante afwerking",
+                                                              "en":  "Brown thong with elegant finish",
+                                                              "fr":  "String marron avec finition élégante",
+                                                              "de":  "Brauner String mit eleganter Verarbeitung"
+                                                          },
+                                          "image":  "../images/merchandise/string12.jpg",
+                                          "price":  15.00,
+                                          "options":  [
+                                              {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                                              {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                                              {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                                              {"id": "video_plas", "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"}, "price": 25.00},
+                                              {"id": "video_squirt", "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"}, "price": 30.00}
+                                          ]
+                                      },
+                        "String 13":  {
+                                          "active":  true,
+                                          "mode":  "miss",
+                                          "category":  "lingerie",
+                                          "title":  {
+                                                        "nl":  "String Zilver",
+                                                        "en":  "Thong Silver",
+                                                        "fr":  "String Argent",
+                                                        "de":  "String Silber"
+                                                    },
+                                          "description":  {
+                                                              "nl":  "Zilveren string met luxe uitstraling",
+                                                              "en":  "Silver thong with luxury appearance",
+                                                              "fr":  "String argent avec apparence luxueuse",
+                                                              "de":  "Silberner String mit luxuriöser Ausstrahlung"
+                                                          },
+                                          "image":  "../images/merchandise/string13.jpg",
+                                          "price":  15.00,
+                                          "options":  [
+                                              {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                                              {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                                              {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                                              {"id": "video_plas", "label": {"nl": "Video van Plas", "en": "Pee Video", "fr": "Vidéo de Pipi", "de": "Piss Video"}, "price": 25.00},
+                                              {"id": "video_squirt", "label": {"nl": "Video van Squirt", "en": "Squirt Video", "fr": "Vidéo de Squirt", "de": "Squirt Video"}, "price": 30.00}
+                                          ]
+                                      },
+                        "Halsband 1":  {
+                                           "active":  true,
+                                           "mode":  "mistress",
+                                           "category":  "halsbanden",
+                                           "title":  {
+                                                         "nl":  "Halsband Model 1",
+                                                         "en":  "Collar Model 1",
+                                                         "fr":  "Collier Modèle 1",
+                                                         "de":  "Halsband Modell 1"
+                                                     },
+                                           "description":  {
+                                                               "nl":  "Elegante halsband voor onderdanigheid",
+                                                               "en":  "Elegant collar for submission",
+                                                               "fr":  "Collier élégant pour la soumission",
+                                                               "de":  "Elegantes Halsband für Unterwerfung"
+                                                           },
+                                           "image":  "../images/merchandise/halsband_1.jpg",
+                                           "price":  35.00
+                                       },
+                        "Halsband 2":  {
+                                           "active":  true,
+                                           "mode":  "mistress",
+                                           "category":  "halsbanden",
+                                           "title":  {
+                                                         "nl":  "Halsband Model 2",
+                                                         "en":  "Collar Model 2",
+                                                         "fr":  "Collier Modèle 2",
+                                                         "de":  "Halsband Modell 2"
+                                                     },
+                                           "description":  {
+                                                               "nl":  "Luxe halsband met D-ring bevestiging",
+                                                               "en":  "Luxury collar with D-ring attachment",
+                                                               "fr":  "Collier de luxe avec attache D-ring",
+                                                               "de":  "Luxus-Halsband mit D-Ring-Befestigung"
+                                                           },
+                                           "image":  "../images/merchandise/halsband_2.jpeg",
+                                           "price":  35.00
+                                       },
+                        "Halsband 3":  {
+                                           "active":  true,
+                                           "mode":  "mistress",
+                                           "category":  "halsbanden",
+                                           "title":  {
+                                                         "nl":  "Halsband Model 3",
+                                                         "en":  "Collar Model 3",
+                                                         "fr":  "Collier Modèle 3",
+                                                         "de":  "Halsband Modell 3"
+                                                     },
+                                           "description":  {
+                                                               "nl":  "Stijlvolle halsband voor Meesteres",
+                                                               "en":  "Stylish collar for Mistress",
+                                                               "fr":  "Collier élégant pour Maîtresse",
+                                                               "de":  "Stilvolles Halsband für Herrin"
+                                                           },
+                                           "image":  "../images/merchandise/halsband_3.jpeg",
+                                           "price":  35.00
+                                       },
+                        "Halsband 4":  {
+                                           "active":  true,
+                                           "mode":  "mistress",
+                                           "category":  "halsbanden",
+                                           "title":  {
+                                                         "nl":  "Halsband Model 4",
+                                                         "en":  "Collar Model 4",
+                                                         "fr":  "Collier Modèle 4",
+                                                         "de":  "Halsband Modell 4"
+                                                     },
+                                           "description":  {
+                                                               "nl":  "Premium halsband met hoogwaardige afwerking",
+                                                               "en":  "Premium collar with high-quality finish",
+                                                               "fr":  "Collier premium avec finition de haute qualité",
+                                                               "de":  "Premium-Halsband mit hochwertiger Verarbeitung"
+                                                           },
+                                           "image":  "../images/merchandise/halsband_4.jpeg",
+                                           "price":  35.00
+                                       },
+                        "Halsband 5":  {
+                                           "active":  true,
+                                           "mode":  "mistress",
+                                           "category":  "halsbanden",
+                                           "title":  {
+                                                         "nl":  "Halsband Model 5",
+                                                         "en":  "Collar Model 5",
+                                                         "fr":  "Collier Modèle 5",
+                                                         "de":  "Halsband Modell 5"
+                                                     },
+                                           "description":  {
+                                                               "nl":  "Exclusieve halsband voor serieuze onderdanigheid",
+                                                               "en":  "Exclusive collar for serious submission",
+                                                               "fr":  "Collier exclusif pour soumission sérieuse",
+                                                               "de":  "Exklusives Halsband für ernsthafte Unterwerfung"
+                                                           },
+                                           "image":  "../images/merchandise/halsband_5.jpg",
+                                           "price":  35.00
+                                       },
+                        "Beekeeper Nano":  {
+                                               "active":  true,
+                                               "mode":  "mistress",
+                                               "category":  "kooitjes",
+                                               "title":  {
+                                                             "nl":  "Beekeeper Nano",
+                                                             "en":  "Beekeeper Nano",
+                                                             "fr":  "Beekeeper Nano",
+                                                             "de":  "Beekeeper Nano"
+                                                         },
+                                               "description":  {
+                                                                   "nl":  "Ultra compact kuisheidskooi voor maximale controle",
+                                                                   "en":  "Ultra compact chastity cage for maximum control",
+                                                                   "fr":  "Cage de chasteté ultra compacte pour un contrôle maximal",
+                                                                   "de":  "Ultrakompakter Keuschheitskäfig für maximale Kontrolle"
+                                                               },
+                                               "image":  "../images/kooitjes/Beekeeper Nano.jpeg",
+                                               "price":  45.00
+                                           },
+                        "Beekeeper Nub":  {
+                                              "active":  true,
+                                              "mode":  "mistress",
+                                              "category":  "kooitjes",
+                                              "title":  {
+                                                            "nl":  "Beekeeper Nub",
+                                                            "en":  "Beekeeper Nub",
+                                                            "fr":  "Beekeeper Nub",
+                                                            "de":  "Beekeeper Nub"
+                                                        },
+                                              "description":  {
+                                                                  "nl":  "Minimale kuisheidskooi voor ultieme beperking",
+                                                                  "en":  "Minimal chastity cage for ultimate restriction",
+                                                                  "fr":  "Cage de chasteté minimale pour une restriction ultime",
+                                                                  "de":  "Minimaler Keuschheitskäfig für ultimative Einschränkung"
+                                                              },
+                                              "image":  "../images/kooitjes/Beekeeper Nub.jpeg",
+                                              "price":  42.00
+                                          },
+                        "Beekeeper Klein":  {
+                                                "active":  true,
+                                                "mode":  "mistress",
+                                                "category":  "kooitjes",
+                                                "title":  {
+                                                              "nl":  "Beekeeper Klein",
+                                                              "en":  "Beekeeper Small",
+                                                              "fr":  "Beekeeper Petit",
+                                                              "de":  "Beekeeper Klein"
+                                                          },
+                                                "description":  {
+                                                                    "nl":  "Compacte kuisheidskooi voor dagelijks gebruik",
+                                                                    "en":  "Compact chastity cage for daily use",
+                                                                    "fr":  "Cage de chasteté compacte pour un usage quotidien",
+                                                                    "de":  "Kompakter Keuschheitskäfig für den täglichen Gebrauch"
+                                                                },
+                                                "image":  "../images/kooitjes/Beekeeper Klein.jpeg",
+                                                "price":  48.00
+                                            },
+                        "Beekeeper Standaard":  {
+                                                    "active":  true,
+                                                    "mode":  "mistress",
+                                                    "category":  "kooitjes",
+                                                    "title":  {
+                                                                  "nl":  "Beekeeper Standaard",
+                                                                  "en":  "Beekeeper Standard",
+                                                                  "fr":  "Beekeeper Standard",
+                                                                  "de":  "Beekeeper Standard"
+                                                              },
+                                                    "description":  {
+                                                                        "nl":  "Klassieke Beekeeper kuisheidskooi met optimaal comfort",
+                                                                        "en":  "Classic Beekeeper chastity cage with optimal comfort",
+                                                                        "fr":  "Cage de chasteté Beekeeper classique avec confort optimal",
+                                                                        "de":  "Klassischer Beekeeper Keuschheitskäfig mit optimalem Komfort"
+                                                                    },
+                                                    "image":  "../images/kooitjes/Beekeeper standaard.jpeg",
+                                                    "price":  52.00
+                                                },
+                        "MicroBee":  {
+                                         "active":  true,
+                                         "mode":  "mistress",
+                                         "category":  "kooitjes",
+                                         "title":  {
+                                                       "nl":  "MicroBee",
+                                                       "en":  "MicroBee",
+                                                       "fr":  "MicroBee",
+                                                       "de":  "MicroBee"
+                                                   },
+                                         "description":  {
+                                                             "nl":  "Ultieme micro kuisheidskooi voor totale controle",
+                                                             "en":  "Ultimate micro chastity cage for total control",
+                                                             "fr":  "Cage de chasteté micro ultime pour un contrôle total",
+                                                             "de":  "Ultimativer Mikro-Keuschheitskäfig für totale Kontrolle"
+                                                         },
+                                         "image":  "../images/kooitjes/microbee_1.jpeg",
+                                         "price":  55.00
+                                     },
+                        "MicroLocker":  {
+                                            "active":  true,
+                                            "mode":  "mistress",
+                                            "category":  "kooitjes",
+                                            "title":  {
+                                                          "nl":  "MicroLocker",
+                                                          "en":  "MicroLocker",
+                                                          "fr":  "MicroLocker",
+                                                          "de":  "MicroLocker"
+                                                      },
+                                            "description":  {
+                                                                "nl":  "Compacte kuisheidskooi met veilige vergrendeling",
+                                                                "en":  "Compact chastity cage with secure locking",
+                                                                "fr":  "Cage de chasteté compacte avec verrouillage sécurisé",
+                                                                "de":  "Kompakter Keuschheitskäfig mit sicherer Verriegelung"
+                                                            },
+                                            "image":  "../images/kooitjes/microlocker_1.jpeg",
+                                            "price":  49.00
+                                        },
+                        "MiniLocker":  {
+                                           "active":  true,
+                                           "mode":  "mistress",
+                                           "category":  "kooitjes",
+                                           "title":  {
+                                                         "nl":  "MiniLocker",
+                                                         "en":  "MiniLocker",
+                                                         "fr":  "MiniLocker",
+                                                         "de":  "MiniLocker"
+                                                     },
+                                           "description":  {
+                                                               "nl":  "Kleine maar effectieve kuisheidskooi",
+                                                               "en":  "Small but effective chastity cage",
+                                                               "fr":  "Petite mais efficace cage de chasteté",
+                                                               "de":  "Kleiner aber effektiver Keuschheitskäfig"
+                                                           },
+                                           "image":  "../images/kooitjes/Minilocker.jpeg",
+                                           "price":  46.00
+                                       },
+                        "Bird Cage":  {
+                                          "active":  true,
+                                          "mode":  "mistress",
+                                          "category":  "kooitjes",
+                                          "title":  {
+                                                        "nl":  "Bird Cage",
+                                                        "en":  "Bird Cage",
+                                                        "fr":  "Bird Cage",
+                                                        "de":  "Bird Cage"
+                                                    },
+                                          "description":  {
+                                                              "nl":  "Unieke kooi-design voor langdurig dragen",
+                                                              "en":  "Unique cage design for long-term wear",
+                                                              "fr":  "Design de cage unique pour un port à long terme",
+                                                              "de":  "Einzigartiges Käfig-Design für Langzeittragen"
+                                                          },
+                                          "image":  "../images/kooitjes/birdcage_0.jpeg",
+                                          "price":  58.00
+                                      },
+                        "Roze Clitty":  {
+                                            "active":  true,
+                                            "mode":  "mistress",
+                                            "category":  "kooitjes",
+                                            "title":  {
+                                                          "nl":  "Roze Clitty",
+                                                          "en":  "Pink Clitty",
+                                                          "fr":  "Clitty Rose",
+                                                          "de":  "Rosa Clitty"
+                                                      },
+                                            "description":  {
+                                                                "nl":  "Stijlvolle roze kuisheidskooi voor feminisatie",
+                                                                "en":  "Stylish pink chastity cage for feminization",
+                                                                "fr":  "Cage de chasteté rose élégante pour la féminisation",
+                                                                "de":  "Stilvoller rosa Keuschheitskäfig zur Feminisierung"
+                                                            },
+                                            "image":  "../images/kooitjes/rozeclitty_1.jpeg",
+                                            "price":  42.00
+                                        },
+                        "Clitty Metal":  {
+                                             "active":  true,
+                                             "mode":  "mistress",
+                                             "category":  "kooitjes",
+                                             "title":  {
+                                                           "nl":  "Clitty Metal",
+                                                           "en":  "Clitty Metal",
+                                                           "fr":  "Clitty Métal",
+                                                           "de":  "Clitty Metall"
+                                                       },
+                                             "description":  {
+                                                                 "nl":  "Metalen kuisheidskooi voor serieuze onderdanigheid",
+                                                                 "en":  "Metal chastity cage for serious submission",
+                                                                 "fr":  "Cage de chasteté en métal pour une soumission sérieuse",
+                                                                 "de":  "Metall-Keuschheitskäfig für ernsthafte Unterwerfung"
+                                                             },
+                                             "image":  "../images/kooitjes/clittymetal_1.jpeg",
+                                             "price":  62.00
+                                         },
+                        "Feminizer":  {
+                                          "active":  true,
+                                          "mode":  "mistress",
+                                          "category":  "kooitjes",
+                                          "title":  {
+                                                        "nl":  "Feminizer",
+                                                        "en":  "Feminizer",
+                                                        "fr":  "Feminizer",
+                                                        "de":  "Feminizer"
+                                                    },
+                                          "description":  {
+                                                              "nl":  "Speciaal ontworpen voor sissy training en feminisatie",
+                                                              "en":  "Specially designed for sissy training and feminization",
+                                                              "fr":  "Spécialement conçu pour l\u0027entraînement sissy et la féminisation",
+                                                              "de":  "Speziell für Sissy-Training und Feminisierung entwickelt"
+                                                          },
+                                          "image":  "../images/kooitjes/feminizer_1.jpeg",
+                                          "price":  54.00
+                                      },
+                        "Sissy Trainer":  {
+                                              "active":  true,
+                                              "mode":  "mistress",
+                                              "category":  "kooitjes",
+                                              "title":  {
+                                                            "nl":  "Sissy Trainer",
+                                                            "en":  "Sissy Trainer",
+                                                            "fr":  "Sissy Trainer",
+                                                            "de":  "Sissy Trainer"
+                                                        },
+                                              "description":  {
+                                                                  "nl":  "Complete sissy training kuisheidskooi",
+                                                                  "en":  "Complete sissy training chastity cage",
+                                                                  "fr":  "Cage de chasteté complète pour entraînement sissy",
+                                                                  "de":  "Kompletter Sissy-Training Keuschheitskäfig"
+                                                              },
+                                              "image":  "../images/kooitjes/sissytrainer_1.jpeg",
+                                              "price":  58.00
+                                          },
+                        "Dogg":  {
+                                     "active":  true,
+                                     "mode":  "mistress",
+                                     "category":  "kooitjes",
+                                     "title":  {
+                                                   "nl":  "Dogg",
+                                                   "en":  "Dogg",
+                                                   "fr":  "Dogg",
+                                                   "de":  "Dogg"
+                                               },
+                                     "description":  {
+                                                         "nl":  "Robuuste kuisheidskooi voor intensieve controle",
+                                                         "en":  "Robust chastity cage for intense control",
+                                                         "fr":  "Cage de chasteté robuste pour un contrôle intense",
+                                                         "de":  "Robuster Keuschheitskäfig für intensive Kontrolle"
+                                                     },
+                                     "image":  "../images/kooitjes/dogg_1.jpeg",
+                                     "price":  56.00
+                                 },
+                        "Double Lock":  {
+                                            "active":  true,
+                                            "mode":  "mistress",
+                                            "category":  "kooitjes",
+                                            "title":  {
+                                                          "nl":  "Double Lock",
+                                                          "en":  "Double Lock",
+                                                          "fr":  "Double Lock",
+                                                          "de":  "Double Lock"
+                                                      },
+                                            "description":  {
+                                                                "nl":  "Dubbele vergrendeling voor maximale veiligheid",
+                                                                "en":  "Double locking for maximum security",
+                                                                "fr":  "Double verrouillage pour une sécurité maximale",
+                                                                "de":  "Doppelte Verriegelung für maximale Sicherheit"
+                                                            },
+                                            "image":  "../images/kooitjes/doublelock_1.jpeg",
+                                            "price":  65.00
+                                        },
+                        "Heart Chain":  {
+                                            "active":  true,
+                                            "mode":  "mistress",
+                                            "category":  "kooitjes",
+                                            "title":  {
+                                                          "nl":  "Heart Chain",
+                                                          "en":  "Heart Chain",
+                                                          "fr":  "Heart Chain",
+                                                          "de":  "Heart Chain"
+                                                      },
+                                            "description":  {
+                                                                "nl":  "Romantische kuisheidskooi met hart design",
+                                                                "en":  "Romantic chastity cage with heart design",
+                                                                "fr":  "Cage de chasteté romantique avec design cœur",
+                                                                "de":  "Romantischer Keuschheitskäfig mit Herz-Design"
+                                                            },
+                                            "image":  "../images/kooitjes/heartchain_1.jpeg",
+                                            "price":  48.00
+                                        },
+                        "Key Locker":  {
+                                           "active":  true,
+                                           "mode":  "mistress",
+                                           "category":  "kooitjes",
+                                           "title":  {
+                                                         "nl":  "Key Locker",
+                                                         "en":  "Key Locker",
+                                                         "fr":  "Key Locker",
+                                                         "de":  "Key Locker"
+                                                     },
+                                           "description":  {
+                                                               "nl":  "Traditionele kuisheidskooi met sleutelvergrendeling",
+                                                               "en":  "Traditional chastity cage with key lock",
+                                                               "fr":  "Cage de chasteté traditionnelle avec serrure à clé",
+                                                               "de":  "Traditioneller Keuschheitskäfig mit Schlüsselschloss"
+                                                           },
+                                           "image":  "../images/kooitjes/keylocker_1.jpeg",
+                                           "price":  52.00
+                                       }
+                    }
+}

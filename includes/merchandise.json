@@ -1,0 +1,839 @@
+{
+    "merchandise": {
+        "String Roze": {
+            "active": true,
+            "mode": "miss",
+            "category": "lingerie",
+            "title": {
+                "nl": "String Roze",
+                "en": "Thong Pink",
+                "fr": "String Rose",
+                "de": "String Rosa"
+            },
+            "description": {
+                "nl": "Gedragen string met extra opties",
+                "en": "Worn thong with extra options",
+                "fr": "String porté avec options supplémentaires",
+                "de": "Getragener String mit zusätzlichen Optionen"
+            },
+            "image": "images/merchandise/string4.jpeg",
+            "price": 30.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                {"id": "video", "label": {"nl": "Video", "en": "Video", "fr": "Vidéo", "de": "Video"}, "price": 25.00}
+            ]
+        },
+        "String Zwart": {
+            "active": true,
+            "mode": "miss",
+            "category": "lingerie",
+            "title": {
+                "nl": "String Zwart",
+                "en": "Thong Black",
+                "fr": "String Noir",
+                "de": "String Schwarz"
+            },
+            "description": {
+                "nl": "Gedragen string met extra opties",
+                "en": "Worn thong with extra options",
+                "fr": "String porté avec options supplémentaires",
+                "de": "Getragener String mit zusätzlichen Optionen"
+            },
+            "image": "images/merchandise/string1.jpeg",
+            "price": 30.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                {"id": "video", "label": {"nl": "Video", "en": "Video", "fr": "Vidéo", "de": "Video"}, "price": 25.00}
+            ]
+        },
+        "String Wit": {
+            "active": true,
+            "mode": "miss",
+            "category": "lingerie",
+            "title": {
+                "nl": "String Wit",
+                "en": "Thong White",
+                "fr": "String Blanc",
+                "de": "String Weiß"
+            },
+            "description": {
+                "nl": "Gedragen string met extra opties",
+                "en": "Worn thong with extra options",
+                "fr": "String porté avec options supplémentaires",
+                "de": "Getragener String mit zusätzlichen Optionen"
+            },
+            "image": "images/merchandise/string10.jpeg",
+            "price": 30.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                {"id": "video", "label": {"nl": "Video", "en": "Video", "fr": "Vidéo", "de": "Video"}, "price": 25.00}
+            ]
+        },
+        "String Rood": {
+            "active": true,
+            "mode": "miss",
+            "category": "lingerie",
+            "title": {
+                "nl": "String Rood",
+                "en": "Thong Red",
+                "fr": "String Rouge",
+                "de": "String Rot"
+            },
+            "description": {
+                "nl": "Gedragen string met extra opties",
+                "en": "Worn thong with extra options",
+                "fr": "String porté avec options supplémentaires",
+                "de": "Getragener String mit zusätzlichen Optionen"
+            },
+            "image": "images/merchandise/string6.jpeg",
+            "price": 30.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                {"id": "video", "label": {"nl": "Video", "en": "Video", "fr": "Vidéo", "de": "Video"}, "price": 25.00}
+            ]
+        },
+        "String Blauw": {
+            "active": true,
+            "mode": "miss",
+            "category": "lingerie",
+            "title": {
+                "nl": "String Blauw",
+                "en": "Thong Blue",
+                "fr": "String Bleu",
+                "de": "String Blau"
+            },
+            "description": {
+                "nl": "Gedragen string met extra opties",
+                "en": "Worn thong with extra options",
+                "fr": "String porté avec options supplémentaires",
+                "de": "Getragener String mit zusätzlichen Optionen"
+            },
+            "image": "images/merchandise/string3.jpeg",
+            "price": 30.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                {"id": "video", "label": {"nl": "Video", "en": "Video", "fr": "Vidéo", "de": "Video"}, "price": 25.00}
+            ]
+        },
+        "String Geel": {
+            "active": true,
+            "mode": "miss",
+            "category": "lingerie",
+            "title": {
+                "nl": "String Geel",
+                "en": "Thong Yellow",
+                "fr": "String Jaune",
+                "de": "String Gelb"
+            },
+            "description": {
+                "nl": "Gedragen string met extra opties",
+                "en": "Worn thong with extra options",
+                "fr": "String porté avec options supplémentaires",
+                "de": "Getragener String mit zusätzlichen Optionen"
+            },
+            "image": "images/merchandise/string5.jpeg",
+            "price": 30.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                {"id": "video", "label": {"nl": "Video", "en": "Video", "fr": "Vidéo", "de": "Video"}, "price": 25.00}
+            ]
+        },
+        "String Paars": {
+            "active": true,
+            "mode": "miss",
+            "category": "lingerie",
+            "title": {
+                "nl": "String Paars",
+                "en": "Thong Purple",
+                "fr": "String Violet",
+                "de": "String Lila"
+            },
+            "description": {
+                "nl": "Gedragen string met extra opties",
+                "en": "Worn thong with extra options",
+                "fr": "String porté avec options supplémentaires",
+                "de": "Getragener String mit zusätzlichen Optionen"
+            },
+            "image": "images/merchandise/string2.jpeg",
+            "price": 30.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                {"id": "video", "label": {"nl": "Video", "en": "Video", "fr": "Vidéo", "de": "Video"}, "price": 25.00}
+            ]
+        },
+        "String Wit/Roze": {
+            "active": true,
+            "mode": "miss",
+            "category": "lingerie",
+            "title": {
+                "nl": "String Wit/Roze",
+                "en": "Thong White/Pink",
+                "fr": "String Blanc/Rose",
+                "de": "String Weiß/Rosa"
+            },
+            "description": {
+                "nl": "Gedragen string met extra opties",
+                "en": "Worn thong with extra options",
+                "fr": "String porté avec options supplémentaires",
+                "de": "Getragener String mit zusätzlichen Optionen"
+            },
+            "image": "images/merchandise/string9.jpeg",
+            "price": 30.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                {"id": "video", "label": {"nl": "Video", "en": "Video", "fr": "Vidéo", "de": "Video"}, "price": 25.00}
+            ]
+        },
+        "String Zwart/Roze": {
+            "active": true,
+            "mode": "miss",
+            "category": "lingerie",
+            "title": {
+                "nl": "String Zwart/Roze",
+                "en": "Thong Black/Pink",
+                "fr": "String Noir/Rose",
+                "de": "String Schwarz/Rosa"
+            },
+            "description": {
+                "nl": "Gedragen string met extra opties",
+                "en": "Worn thong with extra options",
+                "fr": "String porté avec options supplémentaires",
+                "de": "Getragener String mit zusätzlichen Optionen"
+            },
+            "image": "images/merchandise/string8.jpeg",
+            "price": 30.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen", "en": "Worn", "fr": "Porté", "de": "Getragen"}, "price": 10.00},
+                {"id": "plas", "label": {"nl": "Plas", "en": "Pee", "fr": "Pipi", "de": "Pisse"}, "price": 15.00},
+                {"id": "squirt", "label": {"nl": "Squirt", "en": "Squirt", "fr": "Squirt", "de": "Squirt"}, "price": 20.00},
+                {"id": "video", "label": {"nl": "Video", "en": "Video", "fr": "Vidéo", "de": "Video"}, "price": 25.00}
+            ]
+        },
+        "Leren Halsband": {
+            "active": true,
+            "mode": "mistress",
+            "category": "halsbanden",
+            "title": {
+                "nl": "Leren Halsband",
+                "en": "Leather Collar",
+                "fr": "Collier en Cuir",
+                "de": "Lederhalsband"
+            },
+            "description": {
+                "nl": "Luxe leren halsband - Kies je favoriete kleur",
+                "en": "Luxury leather collar - Choose your favorite color",
+                "fr": "Collier en cuir de luxe - Choisissez votre couleur préférée",
+                "de": "Luxus-Lederhalsband - Wähle deine Lieblingsfarbe"
+            },
+            "image": "images/merchandise/halsband_1.jpeg",
+            "price": 35.00,
+            "colorOptions": [
+                {"id": "zwart", "label": {"nl": "Zwart", "en": "Black", "fr": "Noir", "de": "Schwarz"}, "image": "images/merchandise/halsband_4.jpg"},
+                {"id": "roze", "label": {"nl": "Roze", "en": "Pink", "fr": "Rose", "de": "Rosa"}, "image": "images/merchandise/halsband_3.jpeg"},
+                {"id": "rood", "label": {"nl": "Rood", "en": "Red", "fr": "Rouge", "de": "Rot"}, "image": "images/merchandise/halsband_5.jpg"}
+            ]
+        },
+        "The Dog": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "The Dog",
+                "en": "The Dog",
+                "fr": "The Dog",
+                "de": "The Dog"
+            },
+            "description": {
+                "nl": "Zwart kuisheidskooitje met platte ring",
+                "en": "Black chastity cage with flat ring",
+                "fr": "Cage de chasteté noire avec anneau plat",
+                "de": "Schwarzer Keuschheitskäfig mit flachem Ring"
+            },
+            "image": "images/kooitjes/Beekeeper Klein.jpeg",
+            "price": 49.95,
+            "gallery": [
+                "images/kooitjes/dogg_1.jpeg",
+                "images/kooitjes/dogg_2.jpeg",
+                "images/kooitjes/dogg_3.jpeg"
+            ],
+            "sizeOptions": [
+                {"id": "40", "label": {"nl": "40mm", "en": "40mm", "fr": "40mm", "de": "40mm"}, "price": 49.95},
+                {"id": "45", "label": {"nl": "45mm", "en": "45mm", "fr": "45mm", "de": "45mm"}, "price": 49.95},
+                {"id": "50", "label": {"nl": "50mm", "en": "50mm", "fr": "50mm", "de": "50mm"}, "price": 49.95},
+                {"id": "55", "label": {"nl": "55mm", "en": "55mm", "fr": "55mm", "de": "55mm"}, "price": 49.95}
+            ]
+        },
+        "The Beekeeper Roze": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "The Beekeeper Roze",
+                "en": "The Beekeeper Pink",
+                "fr": "The Beekeeper Rose",
+                "de": "The Beekeeper Rosa"
+            },
+            "description": {
+                "nl": "Roze kuisheidskooitje",
+                "en": "Pink chastity cage",
+                "fr": "Cage de chasteté rose",
+                "de": "Rosa Keuschheitskäfig"
+            },
+            "image": "images/kooitjes/Beekeeper Klein.jpeg",
+            "price": 54.95,
+            "gallery": [
+                "images/kooitjes/Beekeeper Pink Klein.jpeg",
+                "images/kooitjes/Beekeeper Pink Nano.jpeg",
+                "images/kooitjes/Beekeeper pink Nub.jpeg",
+                "images/kooitjes/Beekeeper pink Standaard.jpeg"
+            ],
+            "sizeOptions": [
+                {"id": "nub", "label": {"nl": "Nub", "en": "Nub", "fr": "Nub", "de": "Nub"}, "price": 54.95},
+                {"id": "nano", "label": {"nl": "Nano", "en": "Nano", "fr": "Nano", "de": "Nano"}, "price": 54.95},
+                {"id": "klein", "label": {"nl": "Klein", "en": "Small", "fr": "Petit", "de": "Klein"}, "price": 54.95},
+                {"id": "standaard", "label": {"nl": "Standaard", "en": "Standard", "fr": "Standard", "de": "Standard"}, "price": 54.95}
+            ],
+            "options": [
+                {"id": "plat", "label": {"nl": "Platte ring", "en": "Flat ring", "fr": "Anneau plat", "de": "Flacher Ring"}, "price": 0.00},
+                {"id": "gebogen", "label": {"nl": "Gebogen ring", "en": "Curved ring", "fr": "Anneau courbé", "de": "Gebogener Ring"}, "price": 0.00}
+            ]
+        },
+        "The Beekeeper Zwart": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "The Beekeeper Zwart",
+                "en": "The Beekeeper Black",
+                "fr": "The Beekeeper Noir",
+                "de": "The Beekeeper Schwarz"
+            },
+            "description": {
+                "nl": "Zwart kuisheidskooitje",
+                "en": "Black chastity cage",
+                "fr": "Cage de chasteté noire",
+                "de": "Schwarzer Keuschheitskäfig"
+            },
+            "image": "images/kooitjes/Beekeeper Klein.jpeg",
+            "price": 54.95,
+            "gallery": [
+                "images/kooitjes/Beekeeper Klein.jpeg",
+                "images/kooitjes/Beekeeper Nano.jpeg",
+                "images/kooitjes/Beekeeper Nub.jpeg",
+                "images/kooitjes/Beekeeper standaard.jpeg"
+            ],
+            "sizeOptions": [
+                {"id": "nub", "label": {"nl": "Nub", "en": "Nub", "fr": "Nub", "de": "Nub"}, "price": 54.95},
+                {"id": "nano", "label": {"nl": "Nano", "en": "Nano", "fr": "Nano", "de": "Nano"}, "price": 54.95},
+                {"id": "klein", "label": {"nl": "Klein", "en": "Small", "fr": "Petit", "de": "Klein"}, "price": 54.95},
+                {"id": "standaard", "label": {"nl": "Standaard", "en": "Standard", "fr": "Standard", "de": "Standard"}, "price": 54.95}
+            ],
+            "options": [
+                {"id": "plat", "label": {"nl": "Platte ring", "en": "Flat ring", "fr": "Anneau plat", "de": "Flacher Ring"}, "price": 0.00},
+                {"id": "gebogen", "label": {"nl": "Gebogen ring", "en": "Curved ring", "fr": "Anneau courbé", "de": "Gebogener Ring"}, "price": 0.00}
+            ]
+        },
+        "The Feminizer Roze": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "The Feminizer Roze",
+                "en": "The Feminizer Pink",
+                "fr": "The Feminizer Rose",
+                "de": "The Feminizer Rosa"
+            },
+            "description": {
+                "nl": "Roze kuisheidskooitje",
+                "en": "Pink chastity cage",
+                "fr": "Cage de chasteté rose",
+                "de": "Rosa Keuschheitskäfig"
+            },
+            "image": "images/kooitjes/kooitje2.jpeg",
+            "price": 49.95,
+            "gallery": [
+                "images/kooitjes/feminizer_1.jpeg",
+                "images/kooitjes/feminizer_2.jpeg",
+                "images/kooitjes/feminizer_3.jpeg",
+                "images/kooitjes/feminizer_4.jpeg"
+            ],
+            "sizeOptions": [
+                {"id": "nub", "label": {"nl": "Nub", "en": "Nub", "fr": "Nub", "de": "Nub"}, "price": 49.95},
+                {"id": "nano", "label": {"nl": "Nano", "en": "Nano", "fr": "Nano", "de": "Nano"}, "price": 49.95},
+                {"id": "klein", "label": {"nl": "Klein", "en": "Small", "fr": "Petit", "de": "Klein"}, "price": 49.95},
+                {"id": "standaard", "label": {"nl": "Standaard", "en": "Standard", "fr": "Standard", "de": "Standard"}, "price": 49.95},
+                {"id": "max", "label": {"nl": "Max", "en": "Max", "fr": "Max", "de": "Max"}, "price": 49.95}
+            ],
+            "options": [
+                {"id": "plat", "label": {"nl": "Platte ring", "en": "Flat ring", "fr": "Anneau plat", "de": "Flacher Ring"}, "price": 0.00},
+                {"id": "gebogen", "label": {"nl": "Gebogen ring", "en": "Curved ring", "fr": "Anneau courbé", "de": "Gebogener Ring"}, "price": 0.00}
+            ]
+        },
+        "The Feminizer Zwart": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "The Feminizer Zwart",
+                "en": "The Feminizer Black",
+                "fr": "The Feminizer Noir",
+                "de": "The Feminizer Schwarz"
+            },
+            "description": {
+                "nl": "Zwart kuisheidskooitje",
+                "en": "Black chastity cage",
+                "fr": "Cage de chasteté noire",
+                "de": "Schwarzer Keuschheitskäfig"
+            },
+            "image": "images/kooitjes/kooitje2.jpeg",
+            "price": 49.95,
+            "gallery": [
+                "images/kooitjes/feminizer_1.jpeg",
+                "images/kooitjes/feminizer_2.jpeg",
+                "images/kooitjes/feminizer_3.jpeg",
+                "images/kooitjes/feminizer_4.jpeg"
+            ],
+            "sizeOptions": [
+                {"id": "nub", "label": {"nl": "Nub", "en": "Nub", "fr": "Nub", "de": "Nub"}, "price": 49.95},
+                {"id": "nano", "label": {"nl": "Nano", "en": "Nano", "fr": "Nano", "de": "Nano"}, "price": 49.95},
+                {"id": "klein", "label": {"nl": "Klein", "en": "Small", "fr": "Petit", "de": "Klein"}, "price": 49.95},
+                {"id": "standaard", "label": {"nl": "Standaard", "en": "Standard", "fr": "Standard", "de": "Standard"}, "price": 49.95},
+                {"id": "max", "label": {"nl": "Max", "en": "Max", "fr": "Max", "de": "Max"}, "price": 49.95}
+            ],
+            "options": [
+                {"id": "plat", "label": {"nl": "Platte ring", "en": "Flat ring", "fr": "Anneau plat", "de": "Flacher Ring"}, "price": 0.00},
+                {"id": "gebogen", "label": {"nl": "Gebogen ring", "en": "Curved ring", "fr": "Anneau courbé", "de": "Gebogener Ring"}, "price": 0.00}
+            ]
+        },
+        "Double Lock Spike Roze": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "Double Lock Spike Roze",
+                "en": "Double Lock Spike Pink",
+                "fr": "Double Lock Spike Rose",
+                "de": "Double Lock Spike Rosa"
+            },
+            "description": {
+                "nl": "Roze kuisheidskooitje met spikes",
+                "en": "Pink chastity cage with spikes",
+                "fr": "Cage de chasteté rose avec pointes",
+                "de": "Rosa Keuschheitskäfig mit Spikes"
+            },
+            "image": "images/kooitjes/doublelock_1.jpeg",
+            "price": 49.95,
+            "gallery": [
+                "images/kooitjes/doublelock_1.jpeg",
+                "images/kooitjes/doublelock_2.jpeg",
+                "images/kooitjes/doublelock_3.jpeg",
+                "images/kooitjes/doublelock_4.jpeg",
+                "images/kooitjes/doublelock_5.jpeg",
+                "images/kooitjes/doublelock_6.jpeg"
+            ],
+            "options": [
+                {"id": "plat", "label": {"nl": "Platte ring", "en": "Flat ring", "fr": "Anneau plat", "de": "Flacher Ring"}, "price": 0.00},
+                {"id": "gebogen", "label": {"nl": "Gebogen ring", "en": "Curved ring", "fr": "Anneau courbé", "de": "Gebogener Ring"}, "price": 0.00}
+            ]
+        },
+        "Double Lock Spike Zwart": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "Double Lock Spike Zwart",
+                "en": "Double Lock Spike Black",
+                "fr": "Double Lock Spike Noir",
+                "de": "Double Lock Spike Schwarz"
+            },
+            "description": {
+                "nl": "Zwart kuisheidskooitje met spikes",
+                "en": "Black chastity cage with spikes",
+                "fr": "Cage de chasteté noire avec pointes",
+                "de": "Schwarzer Keuschheitskäfig mit Spikes"
+            },
+            "image": "images/kooitjes/doublelock_1.jpeg",
+            "price": 49.95,
+            "gallery": [
+                "images/kooitjes/doublelock_1.jpeg",
+                "images/kooitjes/doublelock_2.jpeg",
+                "images/kooitjes/doublelock_3.jpeg",
+                "images/kooitjes/doublelock_4.jpeg",
+                "images/kooitjes/doublelock_5.jpeg",
+                "images/kooitjes/doublelock_6.jpeg"
+            ],
+            "options": [
+                {"id": "plat", "label": {"nl": "Platte ring", "en": "Flat ring", "fr": "Anneau plat", "de": "Flacher Ring"}, "price": 0.00},
+                {"id": "gebogen", "label": {"nl": "Gebogen ring", "en": "Curved ring", "fr": "Anneau courbé", "de": "Gebogener Ring"}, "price": 0.00}
+            ]
+        },
+        "The Birdcage Roze": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "The Birdcage Roze",
+                "en": "The Birdcage Pink",
+                "fr": "The Birdcage Rose",
+                "de": "The Birdcage Rosa"
+            },
+            "description": {
+                "nl": "Roze kuisheidskooitje",
+                "en": "Pink chastity cage",
+                "fr": "Cage de chasteté rose",
+                "de": "Rosa Keuschheitskäfig"
+            },
+            "image": "images/kooitjes/kooitje3.jpeg",
+            "price": 49.95,
+            "gallery": [
+                "images/kooitjes/birdcage_0.jpeg",
+                "images/kooitjes/birdcage_1.jpeg",
+                "images/kooitjes/birdcage_2.jpeg",
+                "images/kooitjes/birdcage_3.jpeg",
+                "images/kooitjes/birdcage_4.jpeg",
+                "images/kooitjes/birdcage_5.jpeg",
+                "images/kooitjes/birdcage_6.jpeg"
+            ],
+            "sizeOptions": [
+                {"id": "small", "label": {"nl": "Small", "en": "Small", "fr": "Petit", "de": "Klein"}, "price": 49.95},
+                {"id": "medium", "label": {"nl": "Medium", "en": "Medium", "fr": "Moyen", "de": "Mittel"}, "price": 49.95},
+                {"id": "large", "label": {"nl": "Large", "en": "Large", "fr": "Grand", "de": "Groß"}, "price": 49.95}
+            ]
+        },
+        "The Birdcage Zwart": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "The Birdcage Zwart",
+                "en": "The Birdcage Black",
+                "fr": "The Birdcage Noir",
+                "de": "The Birdcage Schwarz"
+            },
+            "description": {
+                "nl": "Zwart kuisheidskooitje",
+                "en": "Black chastity cage",
+                "fr": "Cage de chasteté noire",
+                "de": "Schwarzer Keuschheitskäfig"
+            },
+            "image": "images/kooitjes/kooitje3.jpeg",
+            "price": 49.95,
+            "gallery": [
+                "images/kooitjes/birdcage_0.jpeg",
+                "images/kooitjes/birdcage_1.jpeg",
+                "images/kooitjes/birdcage_2.jpeg",
+                "images/kooitjes/birdcage_3.jpeg",
+                "images/kooitjes/birdcage_4.jpeg",
+                "images/kooitjes/birdcage_5.jpeg",
+                "images/kooitjes/birdcage_6.jpeg"
+            ],
+            "sizeOptions": [
+                {"id": "small", "label": {"nl": "Small", "en": "Small", "fr": "Petit", "de": "Klein"}, "price": 49.95},
+                {"id": "medium", "label": {"nl": "Medium", "en": "Medium", "fr": "Moyen", "de": "Mittel"}, "price": 49.95},
+                {"id": "large", "label": {"nl": "Large", "en": "Large", "fr": "Grand", "de": "Groß"}, "price": 49.95}
+            ]
+        },
+        "The Wanna Bee Roze": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "The Wanna Bee Roze",
+                "en": "The Wanna Bee Pink",
+                "fr": "The Wanna Bee Rose",
+                "de": "The Wanna Bee Rosa"
+            },
+            "description": {
+                "nl": "Roze kuisheidskooitje 12mm",
+                "en": "Pink chastity cage 12mm",
+                "fr": "Cage de chasteté rose 12mm",
+                "de": "Rosa Keuschheitskäfig 12mm"
+            },
+            "image": "images/kooitjes/Beekeeper Klein.jpeg",
+            "price": 39.95,
+            "gallery": [
+                "images/kooitjes/microbee_1.jpeg",
+                "images/kooitjes/microbee_2.jpeg",
+                "images/kooitjes/microbee_3.jpeg",
+                "images/kooitjes/microbee_4.jpeg",
+                "images/kooitjes/microbee_5.jpeg"
+            ]
+        },
+        "The Wanna Bee Zwart": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "The Wanna Bee Zwart",
+                "en": "The Wanna Bee Black",
+                "fr": "The Wanna Bee Noir",
+                "de": "The Wanna Bee Schwarz"
+            },
+            "description": {
+                "nl": "Zwart kuisheidskooitje 12mm",
+                "en": "Black chastity cage 12mm",
+                "fr": "Cage de chasteté noire 12mm",
+                "de": "Schwarzer Keuschheitskäfig 12mm"
+            },
+            "image": "images/kooitjes/Beekeeper Klein.jpeg",
+            "price": 39.95,
+            "gallery": [
+                "images/kooitjes/microbee_1.jpeg",
+                "images/kooitjes/microbee_2.jpeg",
+                "images/kooitjes/microbee_3.jpeg",
+                "images/kooitjes/microbee_4.jpeg",
+                "images/kooitjes/microbee_5.jpeg"
+            ]
+        },
+        "Sissy Clitty": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "Sissy Clitty",
+                "en": "Sissy Clitty",
+                "fr": "Sissy Clitty",
+                "de": "Sissy Clitty"
+            },
+            "description": {
+                "nl": "Roze sissy kuisheidskooitje",
+                "en": "Pink sissy chastity cage",
+                "fr": "Cage de chasteté sissy rose",
+                "de": "Rosa Sissy-Keuschheitskäfig"
+            },
+            "image": "images/kooitjes/kooitje2.jpeg",
+            "price": 39.95,
+            "gallery": [
+                "images/kooitjes/rozeclitty_1.jpeg",
+                "images/kooitjes/rozeclitty_2.jpeg",
+                "images/kooitjes/rozeclitty_3.jpeg"
+            ]
+        },
+        "The Mini Locker": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "The Mini Locker",
+                "en": "The Mini Locker",
+                "fr": "The Mini Locker",
+                "de": "The Mini Locker"
+            },
+            "description": {
+                "nl": "Metalen kuisheidskooitje",
+                "en": "Metal chastity cage",
+                "fr": "Cage de chasteté en métal",
+                "de": "Metall-Keuschheitskäfig"
+            },
+            "image": "images/kooitjes/kooitje3.jpeg",
+            "price": 54.95,
+            "gallery": [
+                "images/kooitjes/Minilocker.jpeg",
+                "images/kooitjes/minilocker 2.jpeg",
+                "images/kooitjes/minilocker3.jpeg",
+                "images/kooitjes/minilocker4.jpeg"
+            ]
+        },
+        "Metal Clitty": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "Metal Clitty",
+                "en": "Metal Clitty",
+                "fr": "Metal Clitty",
+                "de": "Metal Clitty"
+            },
+            "description": {
+                "nl": "Metalen kuisheidskooitje met platte ring",
+                "en": "Metal chastity cage with flat ring",
+                "fr": "Cage de chasteté en métal avec anneau plat",
+                "de": "Metall-Keuschheitskäfig mit flachem Ring"
+            },
+            "image": "images/kooitjes/doublelock_1.jpeg",
+            "price": 54.95,
+            "gallery": [
+                "images/kooitjes/clittymetal_1.jpeg",
+                "images/kooitjes/clittymetal_2.jpeg"
+            ],
+            "sizeOptions": [
+                {"id": "40", "label": {"nl": "40mm", "en": "40mm", "fr": "40mm", "de": "40mm"}, "price": 54.95},
+                {"id": "45", "label": {"nl": "45mm", "en": "45mm", "fr": "45mm", "de": "45mm"}, "price": 54.95},
+                {"id": "50", "label": {"nl": "50mm", "en": "50mm", "fr": "50mm", "de": "50mm"}, "price": 54.95},
+                {"id": "55", "label": {"nl": "55mm", "en": "55mm", "fr": "55mm", "de": "55mm"}, "price": 54.95}
+            ]
+        },
+        "Sissy Trainer": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "Sissy Trainer",
+                "en": "Sissy Trainer",
+                "fr": "Sissy Trainer",
+                "de": "Sissy Trainer"
+            },
+            "description": {
+                "nl": "Metalen sissy trainer met platte ring",
+                "en": "Metal sissy trainer with flat ring",
+                "fr": "Sissy trainer en métal avec anneau plat",
+                "de": "Metall-Sissy-Trainer mit flachem Ring"
+            },
+            "image": "images/kooitjes/kooitje2.jpeg",
+            "price": 44.95,
+
+            "gallery": [
+                "images/kooitjes/sissytrainer_1.jpeg",
+                "images/kooitjes/sissytrainer_2.jpeg",
+                "images/kooitjes/sissytrainer_3.jpeg"
+            ],
+            "sizeOptions": [
+                {"id": "40", "label": {"nl": "40mm", "en": "40mm", "fr": "40mm", "de": "40mm"}, "price": 44.95},
+                {"id": "45", "label": {"nl": "45mm", "en": "45mm", "fr": "45mm", "de": "45mm"}, "price": 44.95},
+                {"id": "50", "label": {"nl": "50mm", "en": "50mm", "fr": "50mm", "de": "50mm"}, "price": 44.95},
+                {"id": "55", "label": {"nl": "55mm", "en": "55mm", "fr": "55mm", "de": "55mm"}, "price": 44.95}
+            ]
+        },
+        "Micro Locker": {
+            "active": true,
+            "mode": "mistress",
+            "category": "kooitjes",
+            "title": {
+                "nl": "Micro Locker",
+                "en": "Micro Locker",
+                "fr": "Micro Locker",
+                "de": "Micro Locker"
+            },
+            "description": {
+                "nl": "Metalen micro kuisheidskooitje met platte ring",
+                "en": "Metal micro chastity cage with flat ring",
+                "fr": "Micro cage de chasteté en métal avec anneau plat",
+                "de": "Metall-Mikro-Keuschheitskäfig mit flachem Ring"
+            },
+            "image": "images/kooitjes/Beekeeper Klein.jpeg",
+            "price": 39.95,
+            "gallery": [
+                "images/kooitjes/microlocker_1.jpeg",
+                "images/kooitjes/microlocker_2.jpeg",
+                "images/kooitjes/microlocker_3.jpeg",
+                "images/kooitjes/mickrolocker_4.jpeg"
+            ],
+            "sizeOptions": [
+                {"id": "40", "label": {"nl": "40mm", "en": "40mm", "fr": "40mm", "de": "40mm"}, "price": 39.95},
+                {"id": "45", "label": {"nl": "45mm", "en": "45mm", "fr": "45mm", "de": "45mm"}, "price": 39.95},
+                {"id": "50", "label": {"nl": "50mm", "en": "50mm", "fr": "50mm", "de": "50mm"}, "price": 39.95},
+                {"id": "55", "label": {"nl": "55mm", "en": "55mm", "fr": "55mm", "de": "55mm"}, "price": 39.95}
+            ]
+        },
+        "Gedragen String Roze": {
+            "active": true,
+            "mode": "miss",
+            "category": "gedragen_lingerie",
+            "title": {
+                "nl": "Gedragen String Roze",
+                "en": "Worn String Pink",
+                "fr": "String Rose Portée",
+                "de": "Getragener String Rosa"
+            },
+            "description": {
+                "nl": "Originele gedragen string - Ongewassen en vers gedragen",
+                "en": "Original worn string - Unwashed and freshly worn",
+                "fr": "String porté original - Non lavé et fraîchement porté",
+                "de": "Original getragener String - Ungewaschen und frisch getragen"
+            },
+            "image": "images/merchandise/string4.jpeg",
+            "price": 45.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen (ongewassen)", "en": "Worn (unwashed)", "fr": "Porté (non lavé)", "de": "Getragen (ungewaschen)"}, "price": 0},
+                {"id": "video", "label": {"nl": "Video inclusief", "en": "Video included", "fr": "Vidéo incluse", "de": "Video enthalten"}, "price": 25.00},
+                {"id": "autograph", "label": {"nl": "Gehandtekend", "en": "Autographed", "fr": "Autographié", "de": "Signiert"}, "price": 10.00}
+            ]
+        },
+        "Gedragen BH Roze": {
+            "active": true,
+            "mode": "miss",
+            "category": "gedragen_lingerie",
+            "title": {
+                "nl": "Gedragen BH Roze",
+                "en": "Worn Bra Pink",
+                "fr": "Soutien-gorge Rose Porté",
+                "de": "Getragener BH Rosa"
+            },
+            "description": {
+                "nl": "Comfort gedragen beha - Zachte stof, lekker draagcomfort",
+                "en": "Comfortably worn bra - Soft fabric, nice wear comfort",
+                "fr": "Soutien-gorge confortable porté - Tissu doux, bon confort de port",
+                "de": "Bequem getragener BH - Weiches Material, angenehmer Komfort"
+            },
+            "image": "images/merchandise/bra1.jpeg",
+            "price": 50.00,
+            "options": [
+                {"id": "gedragen", "label": {"nl": "Gedragen (ongewassen)", "en": "Worn (unwashed)", "fr": "Porté (non lavé)", "de": "Getragen (ungewaschen)"}, "price": 0},
+                {"id": "video", "label": {"nl": "Video inclusief", "en": "Video included", "fr": "Vidéo incluse", "de": "Video enthalten"}, "price": 30.00}
+            ]
+        },
+        "Gedragen String Zwart": {
+            "active": true,
+            "mode": "miss",
+            "category": "gedragen_lingerie",
+            "title": {
+                "nl": "Gedragen String Zwart",
+                "en": "Worn String Black",
+                "fr": "String Noir Porté",
+                "de": "Getragener String Schwarz"
+            },
+            "description": {
+                "nl": "Elegante zwarte gedragen string - Zwaar gedragen variant",
+                "en": "Elegant black worn string - Heavily worn variant",
+                "fr": "Élégant string noir porté - Variante fortement portée",
+                "de": "Eleganter schwarzer getragener String - Stark getragene Variante"
+            },
+            "image": "images/merchandise/string1.jpeg",
+            "price": 65.00,
+            "options": [
+                {"id": "zwaar_gedragen", "label": {"nl": "Zwaar Gedragen", "en": "Heavily Worn", "fr": "Fortement Porté", "de": "Stark Getragen"}, "price": 0},
+                {"id": "video", "label": {"nl": "Video inclusief", "en": "Video included", "fr": "Vidéo incluse", "de": "Video enthalten"}, "price": 30.00},
+                {"id": "custom", "label": {"nl": "Met persoonlijk bericht", "en": "With personal message", "fr": "Avec message personnel", "de": "Mit persönlicher Nachricht"}, "price": 15.00}
+            ]
+        },
+        "Gedragen String Set": {
+            "active": true,
+            "mode": "miss",
+            "category": "gedragen_lingerie",
+            "title": {
+                "nl": "Gedragen String Set (2 stuks)",
+                "en": "Worn String Set (2 pieces)",
+                "fr": "Set de Strings Portés (2 pièces)",
+                "de": "Getragener String Set (2 Stück)"
+            },
+            "description": {
+                "nl": "Set van 2 gedragen strings in verschillende kleuren - Bespaar met deze bundel",
+                "en": "Set of 2 worn strings in different colors - Save with this bundle",
+                "fr": "Ensemble de 2 strings portés en différentes couleurs - Économisez avec ce forfait",
+                "de": "Set aus 2 getragenen Strings in verschiedenen Farben - Sparen Sie mit diesem Bundle"
+            },
+            "image": "images/merchandise/string-set.jpeg",
+            "price": 80.00,
+            "options": [
+                {"id": "2pack", "label": {"nl": "2-Pack (Roze + Zwart)", "en": "2-Pack (Pink + Black)", "fr": "2-Pack (Rose + Noir)", "de": "2er-Pack (Rosa + Schwarz)"}, "price": 0},
+                {"id": "video", "label": {"nl": "Video inclusief", "en": "Video included", "fr": "Vidéo incluse", "de": "Video enthalten"}, "price": 40.00}
+            ]
+        }
+    }
+}

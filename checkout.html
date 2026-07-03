@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrekenen | Miss Jolie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<video class="bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="images/backgrounds/WhatsApp Video 2026-05-12 at 18.33.10.mp4" type="video/mp4">
+</video>
+
+<script src="js/header-mode.js"></script>
+<script src="js/auth-helper.js"></script>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Afrekenen</h1>
+            <p class="hero-sub">Vul je gegevens in en bevestig je bestelling.</p>
+        </div>
+    </section>
+
+    <section class="page-section info-grid">
+        <div class="info-card">
+            <div id="cartSummary"></div>
+        </div>
+
+        <div class="info-card">
+            <h3>Jouw gegevens</h3>
+            <form id="checkoutForm" class="booking-form">
+                <div class="form-group">
+                    <label for="customerName">Volledige naam</label>
+                    <input id="customerName" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerEmail">E-mail</label>
+                    <input id="customerEmail" type="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Telefoonnummer</label>
+                    <input id="customerPhone" type="tel" required>
+                </div>
+                <div class="form-group" id="snapchatGroup" style="display:none;">
+                    <label for="snapchatUsername">Snapchat gebruikersnaam</label>
+                    <input id="snapchatUsername" type="text">
+                </div>
+                <button class="btn primary" type="submit">Bevestig en ga verder</button>
+                <a class="btn secondary" href="cart.html">Terug naar winkelmand</a>
+            </form>
+        </div>
+    </section>
+</main>
+
+<script src="js/static-header.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+{
+    "passes": {
+        "Snapchat Premium": {
+            "active": true,
+            "title": {
+                "nl": "Snapchat Premium",
+                "en": "Snapchat Premium",
+                "fr": "Snapchat Premium",
+                "de": "Snapchat Premium"
+            },
+            "description": {
+                "nl": "Ontvang dagelijks meerdere hete snaps",
+                "en": "Receive multiple hot snaps daily",
+                "fr": "Recevez plusieurs snaps chauds quotidiennement",
+                "de": "Erhalte täglich mehrere heiße Snaps"
+            },
+            "image": "images/photos/joi-brons.jpg",
+            "prices": {
+                "1 maand": 35.00,
+                "2 maanden": 50.00,
+                "6 maanden": 100.00,
+                "1 jaar": 150.00,
+                "lifetime": 200.00
+            },
+            "durations": {
+                "1 maand": {
+                    "nl": "1 maand",
+                    "en": "1 month",
+                    "fr": "1 mois",
+                    "de": "1 Monat"
+                },
+                "2 maanden": {
+                    "nl": "2 maanden",
+                    "en": "2 months",
+                    "fr": "2 mois",
+                    "de": "2 Monate"
+                },
+                "6 maanden": {
+                    "nl": "6 maanden",
+                    "en": "6 months",
+                    "fr": "6 mois",
+                    "de": "6 Monate"
+                },
+                "1 jaar": {
+                    "nl": "1 jaar",
+                    "en": "1 year",
+                    "fr": "1 an",
+                    "de": "1 Jahr"
+                },
+                "lifetime": {
+                    "nl": "Lifetime",
+                    "en": "Lifetime",
+                    "fr": "À vie",
+                    "de": "Lebenslang"
+                }
+            },
+            "tiers": {
+                "1 maand": true,
+                "2 maanden": true,
+                "6 maanden": true,
+                "1 jaar": true,
+                "lifetime": true
+            }
+        },
+        "Telegram VIP": {
+            "active": true,
+            "title": {
+                "nl": "Telegram VIP",
+                "en": "Telegram VIP",
+                "fr": "Telegram VIP",
+                "de": "Telegram VIP"
+            },
+            "description": {
+                "nl": "VIP kanaal met wekelijks updates van geile video's en foto's",
+                "en": "VIP channel with weekly updates of hot videos and photos",
+                "fr": "Canal VIP avec mises à jour hebdomadaires de vidéos et photos chaudes",
+                "de": "VIP-Kanal mit wöchentlichen Updates von heißen Videos und Fotos"
+            },
+            "image": "images/photos/joi-zilver.jpeg",
+            "prices": {
+                "1 maand": 35.00,
+                "2 maanden": 50.00,
+                "6 maanden": 100.00,
+                "1 jaar": 150.00,
+                "lifetime": 200.00
+            },
+            "durations": {
+                "1 maand": {
+                    "nl": "1 maand",
+                    "en": "1 month",
+                    "fr": "1 mois",
+                    "de": "1 Monat"
+                },
+                "2 maanden": {
+                    "nl": "2 maanden",
+                    "en": "2 months",
+                    "fr": "2 mois",
+                    "de": "2 Monate"
+                },
+                "6 maanden": {
+                    "nl": "6 maanden",
+                    "en": "6 months",
+                    "fr": "6 mois",
+                    "de": "6 Monate"
+                },
+                "1 jaar": {
+                    "nl": "1 jaar",
+                    "en": "1 year",
+                    "fr": "1 an",
+                    "de": "1 Jahr"
+                },
+                "lifetime": {
+                    "nl": "Lifetime",
+                    "en": "Lifetime",
+                    "fr": "À vie",
+                    "de": "Lebenslang"
+                }
+            },
+            "tiers": {
+                "1 maand": true,
+                "2 maanden": true,
+                "6 maanden": true,
+                "1 jaar": true,
+                "lifetime": true
+            }
+        },
+        "Chastity Pass": {
+            "active": true,
+            "title": {
+                "nl": "Chastity Membership",
+                "en": "Chastity Membership",
+                "fr": "Adhésion Chasteté",
+                "de": "Keuschheit Mitgliedschaft"
+            },
+            "description": {
+                "nl": "Chastity controle door Meesteres Jolie",
+                "en": "Chastity control by Mistress Jolie",
+                "fr": "Contrôle de chasteté par Maîtresse Jolie",
+                "de": "Keuschheitskontrolle durch Herrin Jolie"
+            },
+            "image": "images/photos/cbt-platinum.jpg",
+            "prices": {
+                "weekend": 75.00,
+                "week": 150.00,
+                "maand": 225.00
+            },
+            "durations": {
+                "weekend": {
+                    "nl": "Weekend (3 dagen)",
+                    "en": "Weekend (3 days)",
+                    "fr": "Week-end (3 jours)",
+                    "de": "Wochenende (3 Tage)"
+                },
+                "week": {
+                    "nl": "1 Week (7 dagen)",
+                    "en": "1 Week (7 days)",
+                    "fr": "1 Semaine (7 jours)",
+                    "de": "1 Woche (7 Tage)"
+                },
+                "maand": {
+                    "nl": "1 Maand (30 dagen)",
+                    "en": "1 Month (30 days)",
+                    "fr": "1 Mois (30 jours)",
+                    "de": "1 Monat (30 Tage)"
+                }
+            },
+            "tiers": {
+                "weekend": true,
+                "week": true,
+                "maand": true
+            },
+            "options": [
+                {
+                    "id": "keyholder_weekend",
+                    "label": {
+                        "nl": "Miss Jolie als Keyholder",
+                        "en": "Miss Jolie as Keyholder",
+                        "fr": "Miss Jolie comme gardienne de clé",
+                        "de": "Miss Jolie als Schlüsselhalter"
+                    },
+                    "price": 25.00,
+                    "tier": "weekend"
+                },
+                {
+                    "id": "keyholder_week",
+                    "label": {
+                        "nl": "Miss Jolie als Keyholder",
+                        "en": "Miss Jolie as Keyholder",
+                        "fr": "Miss Jolie comme gardienne de clé",
+                        "de": "Miss Jolie als Schlüsselhalter"
+                    },
+                    "price": 50.00,
+                    "tier": "week"
+                },
+                {
+                    "id": "keyholder_maand",
+                    "label": {
+                        "nl": "Miss Jolie als Keyholder",
+                        "en": "Miss Jolie as Keyholder",
+                        "fr": "Miss Jolie comme gardienne de clé",
+                        "de": "Miss Jolie als Schlüsselhalter"
+                    },
+                    "price": 100.00,
+                    "tier": "maand"
+                }
+            ]
+        },
+        "Sexting Pass": {
+            "active": false,
+            "title": {
+                "nl": "Sexting Membership",
+                "en": "Sexting Membership",
+                "fr": "Adhésion Sexting",
+                "de": "Sexting Mitgliedschaft"
+            },
+            "description": {
+                "nl": "Onbeperkt sexting met foto's & video's",
+                "en": "Unlimited sexting with photos & videos",
+                "fr": "Sexting illimité avec photos & vidéos",
+                "de": "Unbegrenztes Sexting mit Fotos & Videos"
+            },
+            "image": "images/photos/mix-brons.jpg",
+            "prices": {
+                "15 min": 30.00,
+                "30 min": 50.00,
+                "60 min": 90.00,
+                "dag": 150.00,
+                "week": 250.00,
+                "maand": 500.00
+            },
+            "durations": {
+                "15 min": {
+                    "nl": "15 min",
+                    "en": "15 min",
+                    "fr": "15 min",
+                    "de": "15 min"
+                },
+                "30 min": {
+                    "nl": "30 min",
+                    "en": "30 min",
+                    "fr": "30 min",
+                    "de": "30 min"
+                },
+                "60 min": {
+                    "nl": "60 min",
+                    "en": "60 min",
+                    "fr": "60 min",
+                    "de": "60 min"
+                },
+                "dag": {
+                    "nl": "Dagpas",
+                    "en": "Day Pass",
+                    "fr": "Pass JournÃ©e",
+                    "de": "Tagespass"
+                },
+                "week": {
+                    "nl": "Weekpas",
+                    "en": "Week Pass",
+                    "fr": "Pass Semaine",
+                    "de": "Wochenpass"
+                },
+                "maand": {
+                    "nl": "Maandpas",
+                    "en": "Month Pass",
+                    "fr": "Pass Mensuel",
+                    "de": "Monatspass"
+                }
+            },
+            "tiers": {
+                "15 min": true,
+                "30 min": true,
+                "60 min": true,
+                "dag": true,
+                "week": true,
+                "maand": true
+            }
+        },
+        "WhatsApp Pass": {
+            "active": true,
+            "title": {
+                "nl": "WhatsApp Membership",
+                "en": "WhatsApp Membership",
+                "fr": "Adhésion WhatsApp",
+                "de": "WhatsApp Mitgliedschaft"
+            },
+            "description": {
+                "nl": "Week/maand lang WhatsApp contact met foto's, video's en voicememo's",
+                "en": "Week/month long WhatsApp contact with photos, videos and voice memos",
+                "fr": "Contact WhatsApp d'une semaine/mois avec photos, vidéos et mémos vocaux",
+                "de": "Wochen/monatlicher WhatsApp-Kontakt mit Fotos, Videos und Sprachnachrichten"
+            },
+            "image": "images/photos/duo-goud.jpg",
+            "prices": {
+                "dag": 150.00,
+                "week": 250.00,
+                "maand": 500.00
+            },
+            "durations": {
+                "dag": {
+                    "nl": "Dagpas",
+                    "en": "Day Pass",
+                    "fr": "Pass Journée",
+                    "de": "Tagespass"
+                },
+                "week": {
+                    "nl": "Weekpas",
+                    "en": "Week Pass",
+                    "fr": "Pass Semaine",
+                    "de": "Wochenpass"
+                },
+                "maand": {
+                    "nl": "Maandpas",
+                    "en": "Month Pass",
+                    "fr": "Pass Mensuel",
+                    "de": "Monatspass"
+                }
+            },
+            "tiers": {
+                "dag": true,
+                "week": true,
+                "maand": true
+            }
+        },
+        "Slaventraining Pass": {
+            "active": true,
+            "title": {
+                "nl": "Slaventraining Membership",
+                "en": "Slave Training Membership",
+                "fr": "Adhésion Entraînement Esclave",
+                "de": "Sklaventraining Mitgliedschaft"
+            },
+            "description": {
+                "nl": "Intensieve slaventraining",
+                "en": "Intensive slave training",
+                "fr": "Entraînement intensif d'esclave",
+                "de": "Intensives Sklaventraining"
+            },
+            "image": "images/photos/mixmeesteres-brons.jpg",
+            "prices": {
+                "week": 250.00,
+                "maand": 600.00
+            },
+            "durations": {
+                "week": {
+                    "nl": "1 Week",
+                    "en": "1 Week",
+                    "fr": "1 Semaine",
+                    "de": "1 Woche"
+                },
+                "maand": {
+                    "nl": "1 Maand",
+                    "en": "1 Month",
+                    "fr": "1 Mois",
+                    "de": "1 Monat"
+                }
+            },
+            "tiers": {
+                "week": true,
+                "maand": true
+            }
+        },
+        "Old Chastity Entry DO NOT DELETE": {
+            "active": false,
+            "title": {
+                "nl": "OLD ENTRY",
+                "en": "OLD ENTRY",
+                "fr": "OLD ENTRY",
+                "de": "OLD ENTRY"
+            },
+            "description": {
+                "nl": "OLD",
+                "en": "OLD",
+                "fr": "OLD",
+                "de": "OLD"
+            },
+            "image": "images/kooitjes/doublelock_1.jpeg",
+            "prices": {
+                "1 maand": 25.00,
+                "2 maanden": 45.00,
+                "6 maanden": 120.00,
+                "1 jaar": 220.00,
+                "lifetime": 500.00
+            },
+            "durations": {
+                "1 maand": {
+                    "nl": "1 maand",
+                    "en": "1 month",
+                    "fr": "1 mois",
+                    "de": "1 Monat"
+                },
+                "2 maanden": {
+                    "nl": "2 maanden",
+                    "en": "2 months",
+                    "fr": "2 mois",
+                    "de": "2 Monate"
+                },
+                "6 maanden": {
+                    "nl": "6 maanden",
+                    "en": "6 months",
+                    "fr": "6 mois",
+                    "de": "6 Monate"
+                },
+                "1 jaar": {
+                    "nl": "1 jaar",
+                    "en": "1 year",
+                    "fr": "1 an",
+                    "de": "1 Jahr"
+                },
+                "lifetime": {
+                    "nl": "Lifetime",
+                    "en": "Lifetime",
+                    "fr": "À vie",
+                    "de": "Lebenslang"
+                }
+            },
+            "tiers": {
+                "1 maand": true,
+                "2 maanden": true,
+                "6 maanden": true,
+                "1 jaar": true,
+                "lifetime": true
+            }
+        }
+    }
+}

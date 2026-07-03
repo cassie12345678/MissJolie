@@ -1,0 +1,93 @@
+# Miss Jolie - Apache configuration
+
+# ============================================================
+# SECURITY HEADERS
+# ============================================================
+
+<IfModule mod_headers.c>
+    # Remove deprecated/replaced headers
+    Header unset Pragma
+    Header unset Expires
+    Header unset X-Frame-Options
+    Header unset X-XSS-Protection
+
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Replace X-Frame-Options with CSP frame-ancestors
+    Header always set Content-Security-Policy "frame-ancestors 'self'"
+
+    # Referrer policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ============================================================
+# CACHE CONTROL
+# ============================================================
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # HTML - no cache (always fresh)
+    ExpiresByType text/html                 "access plus 0 seconds"
+
+    # CSS and JS - cache 1 week
+    ExpiresByType text/css                  "access plus 1 week"
+    ExpiresByType application/javascript    "access plus 1 week"
+    ExpiresByType text/javascript           "access plus 1 week"
+
+    # Images - cache 1 month
+    ExpiresByType image/jpeg                "access plus 1 month"
+    ExpiresByType image/png                 "access plus 1 month"
+    ExpiresByType image/gif                 "access plus 1 month"
+    ExpiresByType image/webp                "access plus 1 month"
+    ExpiresByType image/svg+xml             "access plus 1 month"
+    ExpiresByType image/x-icon              "access plus 1 month"
+
+    # Video
+    ExpiresByType video/mp4                 "access plus 1 month"
+    ExpiresByType video/webm                "access plus 1 month"
+
+    # Fonts
+    ExpiresByType font/woff2                "access plus 1 month"
+    ExpiresByType font/woff                 "access plus 1 month"
+
+    # JSON data files
+    ExpiresByType application/json          "access plus 1 hour"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # HTML: always revalidate
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+
+    # PHP endpoints: no cache
+    <FilesMatch "\.php$">
+        Header set Cache-Control "no-store, no-cache"
+    </FilesMatch>
+
+    # Static assets: cache with revalidation
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico|mp4|webm|woff|woff2)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+</IfModule>
+
+# ============================================================
+# CHARSET
+# ============================================================
+
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .css .js .json .php
+
+# ============================================================
+# COMPRESSION
+# ============================================================
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json text/plain
+</IfModule>

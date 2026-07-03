@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Account | Miss Jolie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<video class="bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="images/backgrounds/WhatsApp Video 2026-05-12 at 18.33.10.mp4" type="video/mp4">
+</video>
+
+<script src="js/header-mode.js"></script>
+<script src="js/auth-helper.js"></script>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Mijn Account</h1>
+            <p class="hero-sub">Bekijk je bestellingen en memberships op een plek.</p>
+        </div>
+    </section>
+
+    <section class="account-shell">
+        <div class="account-card">
+            <div class="account-head">
+                <div>
+                    <h2>Welkom terug</h2>
+                    <p class="small-text">Ingelogd als <strong id="accountEmailDisplay">...</strong></p>
+                </div>
+                <div class="purchase-actions">
+                    <a id="adminLink" class="btn secondary hidden" href="admin.html">Admin</a>
+                    <button id="logoutAccountBtn" class="btn primary" type="button">Uitloggen</button>
+                </div>
+            </div>
+
+            <div class="account-tabs">
+                <button class="tab-btn active" data-tab="orders" type="button">Bestellingen</button>
+                <button class="tab-btn" data-tab="collections" type="button">Bundels</button>
+                <button class="tab-btn" data-tab="passes" type="button">Memberships</button>
+            </div>
+
+            <section id="orders-tab" class="tab-content active">
+                <div id="ordersList" class="purchase-list"></div>
+            </section>
+
+            <section id="collections-tab" class="tab-content">
+                <div id="collectionsList" class="purchase-list"></div>
+            </section>
+
+            <section id="passes-tab" class="tab-content">
+                <div id="passesList" class="purchase-list"></div>
+            </section>
+        </div>
+    </section>
+</main>
+
+<script src="js/account.js"></script>
+</body>
+</html>

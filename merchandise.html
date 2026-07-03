@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-text="page_title_merchandise">Merchandise | Miss Jolie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<video class="bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="images/backgrounds/WhatsApp Video 2026-05-12 at 18.33.10.mp4" type="video/mp4">
+</video>
+
+<script src="js/header-mode.js"></script>
+<script src="js/auth-helper.js"></script>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-text="merchandise_hero_title">Merchandise</h1>
+            <p class="hero-sub" data-text="merchandise_hero_subtitle">Exclusieve merchandise van Miss Jolie</p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <div class="category-buttons">
+            <button class="category-btn active" data-category="lingerie" data-text="category_lingerie">Strings</button>
+            <button class="category-btn" data-category="gedragen_lingerie" data-text="category_personal_items">Persoonlijke Items</button>
+            <button class="category-btn" data-category="halsbanden" data-text="category_collars">Halsbanden</button>
+            <button class="category-btn" data-category="kooitjes" data-text="category_cages">Kooitjes</button>
+        </div>
+    </section>
+
+    <section id="productsGrid" class="products-grid" aria-live="polite"></section>
+</main>
+
+<script src="js/merchandise.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+{
+    "collections": {
+        "JOI Pakket": {
+            "active": true,
+            "mode": "miss",
+            "title": "JOI Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo1.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Custom Video": {
+            "active": true,
+            "mode": "miss",
+            "title": "Custom Video",
+            "description": "[object Object]",
+            "image": "images/fotos boekingen_memberships_bundels-20260123T224716Z-3-001/fotos boekingen_memberships_bundels/custom_video.jpeg",
+            "prices": {
+                "brons": 0,
+                "zilver": 0,
+                "goud": 0,
+                "platinum": 0
+            },
+            "tiers": {
+                "brons": false,
+                "zilver": false,
+                "goud": false,
+                "platinum": false
+            }
+        },
+        "Custom Video (Mistress)": {
+            "active": true,
+            "mode": "mistress",
+            "title": "Custom Video (Mistress)",
+            "description": "[object Object]",
+            "image": "images/fotos boekingen_memberships_bundels-20260123T224716Z-3-001/fotos boekingen_memberships_bundels/custom_video.jpeg",
+            "prices": {
+                "brons": 0,
+                "zilver": 0,
+                "goud": 0,
+                "platinum": 0
+            },
+            "tiers": {
+                "brons": false,
+                "zilver": false,
+                "goud": false,
+                "platinum": false
+            }
+        },
+        "Lingerie Pakket": {
+            "active": false,
+            "mode": "miss",
+            "title": "Lingerie Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo2.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Pussyplay Pakket": {
+            "active": false,
+            "mode": "miss",
+            "title": "Pussyplay Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo3.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Strapon Pakket": {
+            "active": true,
+            "mode": "mistress",
+            "title": "Strapon Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo4.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 85
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": false
+            }
+        },
+        "CBT Pakket": {
+            "active": false,
+            "mode": "mistress",
+            "title": "CBT Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo5.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Sissy Pakket": {
+            "active": false,
+            "mode": "mistress",
+            "title": "Sissy Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo8.jpg",
+            "prices": {
+                "brons": 10,
+                "zilver": 20,
+                "goud": 30,
+                "platinum": 40
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Duo Pakket": {
+            "active": true,
+            "mode": "miss",
+            "title": "Duo Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo6.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": false
+            }
+        },
+        "Vibrator/Dildo Pakket": {
+            "active": false,
+            "mode": "miss",
+            "title": "Vibrator/Dildo Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo7.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Cum Pakket": {
+            "active": false,
+            "mode": "miss",
+            "title": "Cum Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo9.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Big Boob Pakket": {
+            "active": true,
+            "mode": "miss",
+            "title": "Big Boob Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo10.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 0
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": false
+            }
+        },
+        "Mix Pakket": {
+            "active": true,
+            "mode": "miss",
+            "title": "Mix Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo11.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Voetjes Pakket": {
+            "active": true,
+            "mode": "mistress",
+            "title": "Voetjes Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo12.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": false,
+                "platinum": false
+            }
+        },
+        "Striptease Pakket": {
+            "active": true,
+            "mode": "miss",
+            "title": "Striptease Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo16.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": false,
+                "goud": false,
+                "platinum": false
+            }
+        },
+        "JOI & CEI Pakket": {
+            "active": false,
+            "mode": "mistress",
+            "title": "JOI & CEI Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo13.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Nippleplay Pakket": {
+            "active": true,
+            "mode": "mistress",
+            "title": "Nippleplay Pakket",
+            "description": "[object Object]",
+            "image": "../images/photos/photo14.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": false,
+                "goud": false,
+                "platinum": false
+            }
+        },
+        "Mix Pakket Meesteres": {
+            "active": true,
+            "mode": "mistress",
+            "title": "Mix Pakket Meesteres",
+            "description": "[object Object]",
+            "image": "../images/photos/photo15.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Squirt Bundel": {
+            "active": true,
+            "mode": "miss",
+            "title": "Squirt Bundel",
+            "description": "[object Object]",
+            "image": "../images/photos/photo20.jpg",
+            "prices": {
+                "brons": 25,
+                "zilver": 35,
+                "goud": 50,
+                "platinum": 75
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        },
+        "Plas/Squirt": {
+            "active": true,
+            "mode": "mistress",
+            "title": "Plas/Squirt",
+            "description": "[object Object]",
+            "image": "../images/photos/photo21.jpg",
+            "prices": {
+                "brons": 35,
+                "zilver": 50,
+                "goud": 75,
+                "platinum": 100
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true
+            }
+        }
+    }
+}

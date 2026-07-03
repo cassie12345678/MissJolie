@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Miss Jolie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<video class="bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="images/backgrounds/WhatsApp Video 2026-05-12 at 18.33.10.mp4" type="video/mp4">
+</video>
+
+<header class="topbar">
+    <a href="home.html" class="logo">Miss Jolie</a>
+    <div class="lang-select" id="langToggle">
+        <button class="lang-btn icon-btn" type="button">
+            <span class="current-lang">🌍</span>
+        </button>
+        <div class="lang-dropdown">
+            <div class="lang-option" data-lang="nl"><img src="images/lang/nl.png" alt="Nederlands"><span>Nederlands</span></div>
+            <div class="lang-option" data-lang="en"><img src="images/lang/en.png" alt="English"><span>English</span></div>
+            <div class="lang-option" data-lang="fr"><img src="images/lang/fr.png" alt="Francais"><span>Francais</span></div>
+            <div class="lang-option" data-lang="de"><img src="images/lang/de.png" alt="Deutsch"><span>Deutsch</span></div>
+        </div>
+    </div>
+</header>
+
+<main class="auth-shell">
+    <section class="auth-card">
+        <h1>Inloggen</h1>
+        <p class="copy-block">Log in om je aankopen, memberships en accountgegevens te bekijken.</p>
+        <div id="errorMessage" class="message-box error"></div>
+        <div id="successMessage" class="message-box success"></div>
+        <form id="loginForm" class="booking-form">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Wachtwoord</label>
+                <input id="password" type="password" required>
+            </div>
+            <button id="submitBtn" class="btn primary" type="submit">Inloggen</button>
+        </form>
+        <div class="helper-links">
+            <a href="wachtwoord-vergeten.html">Wachtwoord vergeten?</a>
+            <a href="registreer.html">Nog geen account? Registreer hier</a>
+        </div>
+    </section>
+</main>
+
+<script src="js/auth-login.js"></script>
+</body>
+</html>

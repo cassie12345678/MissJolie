@@ -1,0 +1,134 @@
+{
+    "merchandise": {
+        "Rode Lingerie Set": {
+            "active": true,
+            "category": "lingerie",
+            "title": "Luxe Lingerie Set",
+            "description": "Elegante lingerie set van premium kwaliteit",
+            "image": "../images/photos/photo1.jpg",
+            "price": 49.99,
+            "colors": {
+                "rood": true,
+                "zwart": true,
+                "roze": true
+            }
+        },
+        "Kanten BH": {
+            "active": true,
+            "category": "lingerie",
+            "title": "Kanten BH",
+            "description": "Verleidelijke kanten beha",
+            "image": "../images/photos/photo2.jpg",
+            "price": 29.99,
+            "colors": {
+                "rood": true,
+                "zwart": true,
+                "roze": true
+            }
+        },
+        "String Set": {
+            "active": true,
+            "category": "lingerie",
+            "title": "String Set",
+            "description": "Comfortabele string in verschillende kleuren",
+            "image": "../images/photos/photo3.jpg",
+            "price": 19.99,
+            "colors": {
+                "rood": true,
+                "zwart": true,
+                "roze": true
+            }
+        },
+        "Gedragen Lingerie": {
+            "active": true,
+            "category": "persoonlijk",
+            "title": "Gedragen Lingerie",
+            "description": "Persoonlijk gedragen lingerie set",
+            "image": "../images/photos/photo4.jpg",
+            "price": 75.00,
+            "colors": {
+                "rood": true,
+                "zwart": true,
+                "roze": true
+            }
+        },
+        "Gedragen Sokken": {
+            "active": true,
+            "category": "persoonlijk",
+            "title": "Gedragen Sokken",
+            "description": "Persoonlijk gedragen sokken",
+            "image": "../images/photos/photo5.jpg",
+            "price": 25.00,
+            "colors": {
+                "rood": true,
+                "zwart": true,
+                "roze": true
+            }
+        },
+        "Gedragen Panty": {
+            "active": true,
+            "category": "persoonlijk",
+            "title": "Gedragen Panty",
+            "description": "Persoonlijk gedragen panty",
+            "image": "../images/photos/photo6.jpg",
+            "price": 35.00,
+            "colors": {
+                "rood": true,
+                "zwart": true,
+                "roze": true
+            }
+        },
+        "Mini Chastity Cage": {
+            "active": true,
+            "category": "kooitjes",
+            "title": "Mini Chastity Cage",
+            "description": "Compact kuisheidskooi voor maximale controle",
+            "image": "../images/photos/photo7.jpg",
+            "price": 45.00,
+            "colors": {
+                "zilver": true,
+                "zwart": true,
+                "roze": true
+            }
+        },
+        "Standard Chastity Cage": {
+            "active": true,
+            "category": "kooitjes",
+            "title": "Standard Chastity Cage",
+            "description": "Klassieke kuisheidskooi in verschillende maten",
+            "image": "../images/photos/photo8.jpg",
+            "price": 55.00,
+            "colors": {
+                "zilver": true,
+                "zwart": true,
+                "roze": true
+            }
+        },
+        "Deluxe Chastity Cage": {
+            "active": true,
+            "category": "kooitjes",
+            "title": "Deluxe Chastity Cage",
+            "description": "Premium kuisheidskooi met extra features",
+            "image": "../images/photos/photo9.jpg",
+            "price": 89.00,
+            "colors": {
+                "zilver": true,
+                "zwart": true,
+                "roze": true
+            }
+        },
+        "Siliconen Cage": {
+            "active": true,
+            "category": "kooitjes",
+            "title": "Siliconen Chastity Cage",
+            "description": "Comfortabele siliconen kuisheidskooi",
+            "image": "../images/photos/photo10.jpg",
+            "price": 39.00,
+            "colors": {
+                "zwart": true,
+                "roze": true,
+                "blauw": true
+            }
+        }
+    }
+}

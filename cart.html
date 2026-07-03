@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winkelmandje | Miss Jolie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<video class="bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="images/backgrounds/WhatsApp Video 2026-05-12 at 18.33.10.mp4" type="video/mp4">
+</video>
+
+<script src="js/header-mode.js"></script>
+<script src="js/auth-helper.js"></script>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Winkelmandje</h1>
+            <p class="hero-sub">Controleer je geselecteerde items en reken af wanneer je klaar bent.</p>
+        </div>
+    </section>
+
+    <section class="cart-layout">
+        <div class="cart-card">
+            <div class="account-head">
+                <h2>Jouw items</h2>
+                <span class="badge">Aantal: <span id="itemCount">0</span></span>
+            </div>
+
+            <div id="emptyCart" class="cart-empty">
+                <p>Je winkelmandje is leeg. Voeg eerst items toe om verder te gaan.</p>
+                <a class="btn secondary" href="collections.html">Bekijk bundels</a>
+            </div>
+
+            <div id="cartItemsList"></div>
+        </div>
+
+        <aside class="cart-card">
+            <h2>Overzicht</h2>
+            <div class="summary-list">
+                <div class="summary-row">
+                    <span>Subtotaal</span>
+                    <span id="subtotal">EUR 0,00</span>
+                </div>
+                <div class="summary-row">
+                    <span>BTW</span>
+                    <span id="tax">EUR 0,00</span>
+                </div>
+                <div class="summary-total">
+                    <div class="summary-item">
+                        <span>Totaal</span>
+                        <span id="total">EUR 0,00</span>
+                    </div>
+                </div>
+                <button id="checkoutBtn" class="btn primary" type="button">Afrekenen</button>
+                <button id="clearCartBtn" class="btn secondary" type="button">Winkelmand legen</button>
+                <p class="small-text">Veilig betalen via Mollie.</p>
+            </div>
+        </aside>
+    </section>
+</main>
+
+<script src="js/cart.js"></script>
+</body>
+</html>

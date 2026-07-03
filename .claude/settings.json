@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('d:/Cas/www/data/strings.json','utf8'\\)\\); console.log\\('OK'\\)\")",
+      "Bash(php -v)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(node \"C:\\\\Users\\\\casbe\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Cas-www\\\\b4830303-541f-4de9-aa17-d2d565417f17\\\\scratchpad\\\\shot.js\")",
+      "Bash(npx --yes playwright screenshot --viewport-size=430,1400 --wait-for-timeout=800 http://127.0.0.1:8791/collections.html \"C:\\\\Users\\\\casbe\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Cas-www\\\\b4830303-541f-4de9-aa17-d2d565417f17\\\\scratchpad\\\\collections-mobile.png\")",
+      "Bash(npx --yes playwright screenshot --viewport-size=430,900 --full-page --wait-for-timeout=800 http://127.0.0.1:8791/collections.html \"C:\\\\Users\\\\casbe\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Cas-www\\\\b4830303-541f-4de9-aa17-d2d565417f17\\\\scratchpad\\\\collections-full.png\")",
+      "Bash(npx --yes playwright screenshot --viewport-size=430,900 --full-page --wait-for-timeout=800 http://127.0.0.1:8791/collections.html \"C:\\\\Users\\\\casbe\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Cas-www\\\\b4830303-541f-4de9-aa17-d2d565417f17\\\\scratchpad\\\\collections-full2.png\")",
+      "Bash(npx --yes playwright screenshot --viewport-size=430,1400 --wait-for-timeout=800 http://127.0.0.1:8791/merchandise.html \"C:\\\\Users\\\\casbe\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Cas-www\\\\b4830303-541f-4de9-aa17-d2d565417f17\\\\scratchpad\\\\merch-mobile.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://127.0.0.1:8791/images/merchandise/string4.jpeg)",
+      "Bash(pkill -f \"http.server 8791\")",
+      "Bash(npx --yes playwright screenshot --viewport-size=430,1400 --full-page --wait-for-timeout=800 http://127.0.0.1:8791/passen.html \"C:\\\\Users\\\\casbe\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Cas-www\\\\b4830303-541f-4de9-aa17-d2d565417f17\\\\scratchpad\\\\passen-full.png\")",
+      "Bash(rm -f /tmp/mpaths.txt /tmp/server.log)"
+    ]
+  }
+}

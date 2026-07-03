@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-text="page_title_collections">Bundels | Miss Jolie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<video class="bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="images/backgrounds/WhatsApp Video 2026-05-12 at 18.33.10.mp4" type="video/mp4">
+</video>
+
+<script src="js/header-mode.js"></script>
+<script src="js/auth-helper.js"></script>
+<script src="js/collection-media.js"></script>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-text="collections_hero_title">Bundels</h1>
+            <p class="hero-sub" data-text="collections_hero_subtitle">Exclusieve video bundels</p>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <p class="copy-block">Blader door alle beschikbare bundels en kies de tier die het beste bij jouw wensen past.</p>
+    </section>
+
+    <section id="collectionViewerShell" class="page-section hidden" hidden>
+        <div id="collectionViewer" aria-live="polite"></div>
+    </section>
+
+    <section id="collections" class="collections-container" aria-live="polite"></section>
+</main>
+
+<script src="js/collections.js"></script>
+</body>
+</html>

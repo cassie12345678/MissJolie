@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Miss Jolie</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<video class="bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="images/backgrounds/WhatsApp Video 2026-05-12 at 18.33.10.mp4" type="video/mp4">
+</video>
+
+<script src="js/header-mode.js"></script>
+<script src="js/auth-helper.js"></script>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Contact</h1>
+            <p class="hero-sub">Neem contact op met Miss Jolie. Alleen serieuze berichten worden beantwoord.</p>
+        </div>
+    </section>
+
+    <section class="booking-page-container">
+        <div class="booking-card">
+            <h2>Stuur een bericht</h2>
+            <p class="contact-subtitle">Gebruik het formulier hieronder en je ontvangt zo snel mogelijk een reactie.</p>
+
+            <div id="errorMessage" class="message-box error"></div>
+            <div id="successMessage" class="message-box success"></div>
+
+            <form id="contactForm" class="booking-form">
+                <div class="form-group">
+                    <label for="naam">Naam</label>
+                    <input id="naam" name="naam" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefoon">Telefoon</label>
+                    <input id="telefoon" name="telefoon" type="tel">
+                </div>
+                <div class="form-group">
+                    <label for="bericht">Bericht</label>
+                    <textarea id="bericht" name="bericht" required></textarea>
+                </div>
+                <button id="submitBtn" class="btn primary" type="submit">Verstuur bericht</button>
+            </form>
+
+            <p class="contact-footer-note">Velden met een verplicht karakter horen volledig ingevuld te worden. Respectvolle communicatie wordt verwacht.</p>
+        </div>
+    </section>
+</main>
+
+<script src="js/static-header.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

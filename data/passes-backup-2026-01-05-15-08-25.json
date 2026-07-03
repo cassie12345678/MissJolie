@@ -1,0 +1,31 @@
+{
+    "passes": {
+        "Snapchat Pass": {
+            "active": true,
+            "title": "Snapchat Pass",
+            "description": "Exclusieve toegang tot mijn Snapchat",
+            "image": "images/photos/snapchat.jpg",
+            "prices": {
+                "brons": 25.00,
+                "zilver": 45.00,
+                "goud": 120.00,
+                "platinum": 220.00,
+                "lifetime": 500.00
+            },
+            "durations": {
+                "brons": "1 maand",
+                "zilver": "2 maanden",
+                "goud": "6 maanden",
+                "platinum": "1 jaar",
+                "lifetime": "Lifetime"
+            },
+            "tiers": {
+                "brons": true,
+                "zilver": true,
+                "goud": true,
+                "platinum": true,
+                "lifetime": true
+            }
+        }
+    }
+}

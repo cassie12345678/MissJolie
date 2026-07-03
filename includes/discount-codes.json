@@ -1,0 +1,60 @@
+{
+  "codes": [
+    {
+      "id": "WELCOME10",
+      "code": "WELCOME10",
+      "type": "percentage",
+      "value": 10,
+      "description": "10% korting op je eerste bestelling",
+      "active": true,
+      "categories": ["all"],
+      "products": [],
+      "minAmount": 0,
+      "maxUses": null,
+      "usedCount": 0,
+      "expiryDate": null
+    },
+    {
+      "id": "PASS20",
+      "code": "PASS20",
+      "type": "percentage",
+      "value": 20,
+      "description": "20% korting op alle passen/memberships",
+      "active": true,
+      "categories": ["pass"],
+      "products": [],
+      "minAmount": 0,
+      "maxUses": 100,
+      "usedCount": 0,
+      "expiryDate": "2026-12-31"
+    },
+    {
+      "id": "BUNDEL15",
+      "code": "BUNDEL15",
+      "type": "fixed",
+      "value": 15,
+      "description": "€15 korting op bundels",
+      "active": true,
+      "categories": ["collection"],
+      "products": [],
+      "minAmount": 50,
+      "maxUses": 50,
+      "usedCount": 0,
+      "expiryDate": "2026-06-30"
+    },
+    {
+      "id": "MERCH10",
+      "code": "MERCH10",
+      "type": "fixed",
+      "value": 10,
+      "description": "€10 korting op merchandise",
+      "active": true,
+      "categories": ["merchandise"],
+      "products": [],
+      "minAmount": 30,
+      "maxUses": null,
+      "usedCount": 0,
+      "expiryDate": null
+    }
+  ]
+}
