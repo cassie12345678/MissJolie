@@ -708,6 +708,11 @@ function updateCartBadge() {
    PURCHASED COLLECTION VIEWER
 ============================================================ */
 function openPurchasedCollection(collectionKey) {
+    if (!collectionViewerShell || !collectionViewer) {
+        window.location.href = `collections.html?view=${encodeURIComponent(collectionKey)}`;
+        return;
+    }
+
     requestedCollectionId = collectionKey;
 
     const url = new URL(window.location.href);

@@ -1,0 +1,54 @@
+name: Upload website
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: upload-website
+  cancel-in-progress: true
+
+jobs:
+  upload:
+    name: Upload to hosting
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Upload files
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: /public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/.claude/**
+            **/.pw-output/**
+            **/.venv/**
+            **/.vscode/**
+            **/node_modules/**
+            **/desktop.ini
+            **/*.md
+            tmp-*
+            live-home.png
+            db-test.php
+            db-diagnose.php
+            test-db-connection.php
+            includes/*backup*.json
+            includes/*log*.txt
+            includes/*.sql
+            includes/*.bat
+            includes/test-*.php
+            data/*backup*.json
+            images/uploads/**
