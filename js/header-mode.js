@@ -11,6 +11,7 @@ const SHARED_HEADER_HTML = `
     <nav id="mainNav">
         <a href="home.html" data-text="nav_home">Home</a>
         <a href="collections.html" data-text="nav_collections">Bundels</a>
+        <a href="merchandise.html" data-text="nav_merchandise">Merchandise</a>
         <a href="passen.html" data-text="nav_passes">Memberships</a>
         <a href="missjolie.html" data-text="nav_bio">Bio</a>
         <a href="links.html" data-text="nav_links">Mijn Links</a>

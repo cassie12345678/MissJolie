@@ -470,7 +470,6 @@ function renderMerchandise() {
 
     const filteredItems = Object.entries(merchandise).filter(([, item]) => (
         item.active
-        && item.mode === currentMode
         && normalizeCategory(item.category) === normalizeCategory(currentCategory)
     ));
 
