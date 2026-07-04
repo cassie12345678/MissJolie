@@ -13,6 +13,7 @@ const SHARED_HEADER_HTML = `
         <a href="collections.html" data-text="nav_collections">Bundels</a>
         <a href="merchandise.html" data-text="nav_merchandise">Merchandise</a>
         <a href="passen.html" data-text="nav_passes">Memberships</a>
+        <a href="booking.html" data-text="nav_bookings">Boekingen</a>
         <a href="missjolie.html" data-text="nav_bio">Bio</a>
         <a href="links.html" data-text="nav_links">Mijn Links</a>
         <a href="contact.html" data-text="nav_contact">Contact</a>
