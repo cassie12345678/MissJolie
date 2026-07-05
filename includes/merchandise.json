@@ -82,7 +82,7 @@
                 "fr": "Collier en cuir de luxe - Choisissez votre couleur préférée",
                 "de": "Luxus-Lederhalsband - Wähle deine Lieblingsfarbe"
             },
-            "image": "images/merchandise/halsband_1.jpeg",
+            "image": "images/merchandise/halsband_4.jpg",
             "price": 35.00,
             "colorOptions": [
                 {"id": "zwart", "label": {"nl": "Zwart", "en": "Black", "fr": "Noir", "de": "Schwarz"}, "image": "images/merchandise/halsband_4.jpg"},

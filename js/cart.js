@@ -3,13 +3,7 @@
 ============================================================ */
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-if (Array.isArray(cart)) {
-    const sanitizedCart = cart.filter((item) => item && item.type !== "booking");
-    if (sanitizedCart.length !== cart.length) {
-        cart = sanitizedCart;
-        localStorage.setItem("cart", JSON.stringify(cart));
-    }
-} else {
+if (!Array.isArray(cart)) {
     cart = [];
     localStorage.setItem("cart", JSON.stringify(cart));
 }
@@ -290,9 +284,10 @@ async function proceedToCheckout() {
         return;
     }
 
-    // Passes hebben een Snapchat gebruikersnaam nodig - haal die eerst op via checkout.html
-    const hasPass = cart.some(item => item.type === 'pass');
-    if (hasPass) {
+    // Passes hebben een Snapchat gebruikersnaam nodig en boekingen hebben
+    // naam/e-mail/telefoon nodig - haal die eerst op via checkout.html
+    const needsCheckoutForm = cart.some(item => item.type === 'pass' || item.type === 'booking');
+    if (needsCheckoutForm) {
         localStorage.setItem('pendingCheckout', 'true');
         window.location.href = 'checkout.html';
         return;
@@ -332,7 +327,10 @@ async function proceedToCheckout() {
                     name: item.name,
                     tier: item.tier || null,
                     description: item.description || null,
-                    price: item.price
+                    price: item.price,
+                    date: item.date || null,
+                    time: item.time || null,
+                    notes: item.notes || null
                 }))
             })
         });
@@ -365,7 +363,8 @@ function getTypeLabel(type) {
     const labels = {
         'collection': strings[currentLang]?.type_video_collection || '🎬 Video Collection',
         'merchandise': strings[currentLang]?.type_merchandise || '👕 Merchandise',
-        'pass': strings[currentLang]?.type_pass || '🎫 Pass'
+        'pass': strings[currentLang]?.type_pass || '🎫 Pass',
+        'booking': strings[currentLang]?.type_booking || '📅 Boeking'
     };
     return labels[type] || type;
 }

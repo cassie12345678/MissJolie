@@ -1,212 +1,240 @@
 /* ============================================================
-   BOOKING FORM - Sexting, Videocall, Dick Rating
+   BOOKING FORM - Sexting, Videocall, Dick Rating, Chastity
+   Kaarten met tier-knoppen + datum/tijd, zelfde stijl als Bundels.
+   Naam/e-mail/telefoon worden pas bij het afrekenen gevraagd
+   (zie checkout.html), net als bij Memberships.
 ============================================================ */
+let strings = {};
+let currentLang = localStorage.getItem("lang") || "nl";
+
 const services = {
     sexting: {
-        name: "Sexting incl. foto's & video",
+        nameKey: "service_sexting",
+        image: "images/photos/mix-goud.jpg",
         tiers: {
-            "15min": { label: "15 min", price: 25.00 },
-            "30min": { label: "30 min", price: 45.00 },
-            "60min": { label: "60 min", price: 75.00 },
-            "dag": { label: "Dagpas", price: 150.00 },
-            "week": { label: "Weekpas", price: 500.00 },
-            "maand": { label: "Maandpas", price: 1500.00 }
+            "15min": { durationKey: "duration_15min", price: 25.00 },
+            "30min": { durationKey: "duration_30min", price: 45.00 },
+            "60min": { durationKey: "duration_60min", price: 75.00 },
+            "dag": { durationKey: "duration_day", price: 150.00 },
+            "week": { durationKey: "duration_week", price: 500.00 },
+            "maand": { durationKey: "duration_month", price: 1500.00 }
         }
     },
     videocall_no_face: {
-        name: "Videocall zonder gezicht",
+        nameKey: "service_videocall_no_face",
+        image: "images/photos/duo-brons.jpg",
         tiers: {
-            "15min": { label: "15 min", price: 30.00 },
-            "30min": { label: "30 min", price: 55.00 },
-            "60min": { label: "60 min", price: 100.00 }
+            "15min": { durationKey: "duration_15min", price: 30.00 },
+            "30min": { durationKey: "duration_30min", price: 55.00 },
+            "60min": { durationKey: "duration_60min", price: 100.00 }
         }
     },
     videocall_with_face: {
-        name: "Videocall met gezicht",
+        nameKey: "service_videocall_with_face",
+        image: "images/photos/duo-goud.jpg",
         tiers: {
-            "15min": { label: "15 min", price: 40.00 },
-            "30min": { label: "30 min", price: 70.00 },
-            "60min": { label: "60 min", price: 120.00 }
+            "15min": { durationKey: "duration_15min", price: 40.00 },
+            "30min": { durationKey: "duration_30min", price: 70.00 },
+            "60min": { durationKey: "duration_60min", price: 120.00 }
         }
     },
     dickrating: {
-        name: "Dick Rating",
+        nameKey: "service_dickrating",
+        image: "images/photos/joicei-goud.jpg",
         tiers: {
-            "voicememo": { label: "Voicememo 1-2 min", price: 10.00 },
-            "video": { label: "Video beoordeling", price: 15.00 },
-            "topless_video": { label: "Topless video 1-2 min", price: 20.00 },
-            "topless_video_dick": { label: "Topless video + jouw pik in beeld 1-2 min", price: 25.00 }
+            "voicememo": { durationKey: "dickrating_voicememo", price: 10.00 },
+            "video": { durationKey: "dickrating_video", price: 15.00 },
+            "topless_video": { durationKey: "dickrating_topless_video", price: 20.00 },
+            "topless_video_dick": { durationKey: "dickrating_topless_video_dick", price: 25.00 }
+        }
+    },
+    chastity: {
+        nameKey: "service_chastity",
+        image: "images/kooitjes/doublelock_1.jpeg",
+        tiers: {
+            "weekend": { durationKey: "duration_weekend", price: 25.00 },
+            "week": { durationKey: "duration_week", price: 50.00 },
+            "maand": { durationKey: "duration_month", price: 100.00 }
         }
     }
 };
 
 /* ============================================================
-   MOBILE MENU TOGGLE
+   HELPERS
+   (mobiel menu + taal-dropdown worden al afgehandeld door
+   js/static-header.js, dat ook op deze pagina wordt geladen)
 ============================================================ */
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
-const langToggle = document.getElementById("langToggle");
-
-if (menuToggle && mainNav) {
-    menuToggle.addEventListener("click", (e) => {
-        e.stopPropagation();
-        menuToggle.classList.toggle("active");
-        mainNav.classList.toggle("active");
-        if (langToggle) langToggle.classList.remove("active");
-    });
-
-    document.addEventListener("click", (e) => {
-        if (!menuToggle.contains(e.target) && !mainNav.contains(e.target)) {
-            menuToggle.classList.remove("active");
-            mainNav.classList.remove("active");
-        }
-    });
-
-    mainNav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            menuToggle.classList.remove("active");
-            mainNav.classList.remove("active");
-        });
-    });
-}
-
-if (langToggle) {
-    const langBtn = langToggle.querySelector(".lang-btn");
-    const langOptions = langToggle.querySelectorAll(".lang-option");
-
-    if (langBtn) {
-        langBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            langToggle.classList.toggle("active");
-            if (menuToggle) menuToggle.classList.remove("active");
-            if (mainNav) mainNav.classList.remove("active");
-        });
-    }
-
-    langOptions.forEach((option) => {
-        option.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            langOptions.forEach((opt) => opt.classList.remove("active"));
-            option.classList.add("active");
-            localStorage.setItem("lang", option.dataset.lang);
-            langToggle.classList.remove("active");
-        });
-    });
-
-    document.addEventListener("click", (e) => {
-        if (!langToggle.contains(e.target)) {
-            langToggle.classList.remove("active");
-        }
-    });
-
-    const currentLang = localStorage.getItem("lang") || "nl";
-    const currentOption = langToggle.querySelector(`[data-lang="${currentLang}"]`);
-    if (currentOption) {
-        currentOption.classList.add("active");
-    }
-}
-
-/* ============================================================
-   BOOKING FORM LOGIC
-============================================================ */
-const serviceSelect = document.getElementById("service");
-const tierSelect = document.getElementById("tier");
-const priceDisplay = document.getElementById("priceDisplay");
-const bookingForm = document.getElementById("bookingForm");
-const bookingError = document.getElementById("errorMessage");
-const bookingSuccess = document.getElementById("successMessage");
-const submitBtn = document.getElementById("submitBtn");
-const bookingDateInput = document.getElementById("bookingDate");
-
 function formatPrice(value) {
     return `€${Number.parseFloat(value || 0).toFixed(2)}`;
 }
 
-function populateServiceSelect() {
-    if (!serviceSelect) return;
-
-    serviceSelect.innerHTML = Object.entries(services)
-        .map(([key, service]) => `<option value="${key}">${service.name}</option>`)
-        .join("");
+function escapeHtml(value) {
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
 }
 
-function populateTierSelect() {
-    if (!tierSelect || !serviceSelect) return;
-
-    const service = services[serviceSelect.value];
-    if (!service) return;
-
-    tierSelect.innerHTML = Object.entries(service.tiers)
-        .map(([tierId, tier]) => `<option value="${tierId}">${tier.label} - ${formatPrice(tier.price)}</option>`)
-        .join("");
-
-    updatePriceDisplay();
+function getString(key, fallback = "") {
+    const langStrings = strings[currentLang] || strings.nl || {};
+    return langStrings[key] || fallback;
 }
 
-function updatePriceDisplay() {
-    if (!priceDisplay || !serviceSelect || !tierSelect) return;
+function showNotification(message, type = "success") {
+    const notification = document.createElement("div");
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: ${type === "success" ? "#50ff96" : "#ff5050"};
+        color: #000;
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-weight: bold;
+        z-index: 10000;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    `;
+    notification.textContent = message;
+    document.body.appendChild(notification);
 
-    const service = services[serviceSelect.value];
-    const tier = service ? service.tiers[tierSelect.value] : null;
-    priceDisplay.textContent = formatPrice(tier ? tier.price : 0);
+    setTimeout(() => notification.remove(), 3000);
 }
 
-if (serviceSelect && tierSelect) {
-    populateServiceSelect();
-    populateTierSelect();
+function addToCart(item) {
+    const currentCart = JSON.parse(localStorage.getItem("cart")) || [];
+    currentCart.push(item);
+    localStorage.setItem("cart", JSON.stringify(currentCart));
 
-    serviceSelect.addEventListener("change", populateTierSelect);
-    tierSelect.addEventListener("change", updatePriceDisplay);
+    const badge = document.getElementById("cartBadge");
+    if (badge) {
+        badge.textContent = currentCart.length;
+        badge.style.display = "flex";
+    }
 }
 
-if (bookingDateInput) {
-    bookingDateInput.min = new Date().toISOString().split("T")[0];
+/* ============================================================
+   RENDER SERVICE CARDS (kaart + tier-knoppen + datum/tijd)
+============================================================ */
+function renderServices() {
+    const grid = document.getElementById("servicesGrid");
+    if (!grid) return;
+
+    const addToCartLabel = getString("add_to_cart", getString("add_to_cart_alt", "Toevoegen aan winkelmandje"));
+    const oneTimeLabel = getString("duration_onetime", "Eenmalig");
+    const today = new Date().toISOString().split("T")[0];
+
+    grid.innerHTML = Object.entries(services).map(([key, service]) => {
+        const tiers = Object.keys(service.tiers);
+        const defaultTier = tiers[0];
+        const defaultPrice = service.tiers[defaultTier].price;
+        const serviceName = getString(service.nameKey, key);
+
+        return `
+            <div class="product-card" data-service-key="${escapeHtml(key)}">
+                <div class="product-card-media">
+                    <img src="${escapeHtml(service.image)}" alt="${escapeHtml(serviceName)}" loading="lazy" onerror="this.onerror=null;this.src='images/backgrounds/test.jpg';">
+                </div>
+                <div class="product-card-content">
+                    <h3>${escapeHtml(serviceName)}</h3>
+
+                    <div class="tier-selector tier-selector-segmented">
+                        ${tiers.map((tierId, index) => `
+                            <button class="tier ${index === 0 ? "active" : ""}" data-tier="${escapeHtml(tierId)}">
+                                ${escapeHtml(getString(service.tiers[tierId].durationKey, tierId))}
+                            </button>
+                        `).join("")}
+                    </div>
+
+                    <div class="card-datetime">
+                        <input type="date" class="card-date" min="${today}" required>
+                        <input type="time" class="card-time" required>
+                    </div>
+
+                    <p class="product-price">${formatPrice(defaultPrice)}</p>
+                    <p class="product-sub">${escapeHtml(oneTimeLabel)}</p>
+
+                    <button class="buy-btn" data-service="${escapeHtml(key)}">${escapeHtml(addToCartLabel)}</button>
+                </div>
+            </div>
+        `;
+    }).join("");
+
+    enableTierSwitching();
+    enableServiceButtons();
 }
 
-if (bookingForm) {
-    bookingForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
+function enableTierSwitching() {
+    document.querySelectorAll(".product-card[data-service-key] .tier").forEach((btn) => {
+        btn.onclick = () => {
+            const card = btn.closest(".product-card");
+            const serviceKey = card.dataset.serviceKey;
+            const service = services[serviceKey];
 
-        bookingError.style.display = "none";
-        bookingSuccess.style.display = "none";
+            card.querySelectorAll(".tier").forEach((peer) => peer.classList.remove("active"));
+            btn.classList.add("active");
 
-        const service = services[serviceSelect.value];
-        const tier = service ? service.tiers[tierSelect.value] : null;
-        if (!service || !tier) {
-            bookingError.textContent = "Selecteer een geldige service en tarief.";
-            bookingError.style.display = "block";
-            return;
-        }
+            const tier = service.tiers[btn.dataset.tier];
+            card.querySelector(".product-price").textContent = formatPrice(tier.price);
+        };
+    });
+}
 
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Bezig met verzenden...";
+function enableServiceButtons() {
+    document.querySelectorAll(".buy-btn[data-service]").forEach((btn) => {
+        btn.onclick = () => {
+            const card = btn.closest(".product-card");
+            const serviceKey = card.dataset.serviceKey;
+            const service = services[serviceKey];
+            const activeTierId = card.querySelector(".tier.active")?.dataset.tier;
+            const tier = service.tiers[activeTierId];
+            const serviceName = getString(service.nameKey, serviceKey);
+            const durationLabel = getString(tier.durationKey, activeTierId);
 
-        const formData = new FormData(bookingForm);
-        formData.set("service", service.name);
-        formData.set("duration", tier.label);
-        formData.set("price", String(tier.price));
+            const date = card.querySelector(".card-date").value;
+            const time = card.querySelector(".card-time").value;
 
-        try {
-            const response = await fetch("includes/create-booking.php", {
-                method: "POST",
-                body: formData
-            });
-
-            const message = (await response.text()).trim();
-
-            if (message === "SUCCESS") {
-                window.location.href = "booking-verzonden.html";
+            if (!date || !time) {
+                showNotification("Kies eerst een datum en tijd.", "error");
                 return;
             }
 
-            throw new Error(message || "Er ging iets mis bij het boeken.");
-        } catch (error) {
-            bookingError.textContent = error.message || "Er ging iets mis bij het boeken.";
-            bookingError.style.display = "block";
-            submitBtn.disabled = false;
-            submitBtn.textContent = "Bevestig Boeking";
-        }
+            addToCart({
+                id: `booking-${serviceKey}-${Date.now()}`,
+                name: serviceName,
+                service: serviceName,
+                tier: durationLabel,
+                duration: durationLabel,
+                description: `${date} om ${time}`,
+                price: tier.price,
+                image: service.image,
+                type: "booking",
+                date,
+                time
+            });
+
+            showNotification("Toegevoegd aan winkelmandje!", "success");
+        };
     });
 }
+
+/* ============================================================
+   TAAL (herlaadt kaarten met vertaalde tekst)
+============================================================ */
+window.addEventListener("langchange", (event) => {
+    currentLang = event?.detail?.lang || localStorage.getItem("lang") || "nl";
+    renderServices();
+});
+
+/* ============================================================
+   INIT
+============================================================ */
+(async function init() {
+    try {
+        strings = await fetch("data/strings.json").then((r) => r.json());
+    } catch (error) {
+        strings = {};
+    }
+    renderServices();
+})();

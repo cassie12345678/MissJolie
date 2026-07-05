@@ -27,20 +27,24 @@ function displayCartSummary() {
     let html = '<h3>Jouw Bestelling</h3>';
     let total = 0;
     let hasPass = false;
+    let hasBooking = false;
 
     cart.forEach(item => {
         total += item.price;
         const displayName = item.tier ? `${item.name} (${item.tier})` : item.name;
-        
+
         html += `
             <div class="summary-item">
-                <span>${displayName}</span>
+                <span>${displayName}${item.description ? ` — ${item.description}` : ''}</span>
                 <span>€${item.price.toFixed(2)}</span>
             </div>
         `;
 
         if (item.type === 'pass') {
             hasPass = true;
+        }
+        if (item.type === 'booking') {
+            hasBooking = true;
         }
     });
 
@@ -57,8 +61,13 @@ function displayCartSummary() {
 
     // Show Snapchat username field if cart contains passes
     if (hasPass) {
-        document.getElementById("snapchatGroup").style.display = "block";
+        document.getElementById("snapchatGroup").style.display = "flex";
         document.getElementById("snapchatUsername").required = true;
+    }
+
+    // Show booking notes field if cart contains bookings
+    if (hasBooking) {
+        document.getElementById("bookingNotesGroup").style.display = "flex";
     }
 }
 
@@ -76,6 +85,7 @@ document.getElementById("checkoutForm").addEventListener("submit", async (e) => 
         phone: document.getElementById("customerPhone").value,
         snapchatUsername: document.getElementById("snapchatUsername").value || null
     };
+    const bookingNotes = document.getElementById("bookingNotes").value.trim() || null;
 
     localStorage.setItem("customerData", JSON.stringify(customerData));
     localStorage.removeItem("pendingCheckout");
@@ -101,7 +111,10 @@ document.getElementById("checkoutForm").addEventListener("submit", async (e) => 
                     name: item.name,
                     tier: item.tier || null,
                     description: item.description || null,
-                    price: item.price
+                    price: item.price,
+                    date: item.date || null,
+                    time: item.time || null,
+                    notes: item.type === 'booking' ? bookingNotes : null
                 }))
             })
         });

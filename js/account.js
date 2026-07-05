@@ -220,8 +220,63 @@ function renderPasses(items) {
     `).join("");
 }
 
+function renderMerchandise(items) {
+    const container = document.getElementById("merchandiseList");
+    if (!container) return;
+
+    if (!items.length) {
+        container.innerHTML = getEmptyState("Je hebt nog geen merchandise gekocht.", "merchandise.html", "Bekijk merchandise");
+        return;
+    }
+
+    container.innerHTML = items.map((item) => `
+        <article class="purchase-card">
+            <div class="purchase-info">
+                <h3>${escapeHtml(item.item_name)}</h3>
+                <p>Datum: ${formatDate(item.purchased_at)}</p>
+                <p>Prijs: ${formatCurrency(item.price)}</p>
+            </div>
+            <div class="purchase-actions">
+                <span class="badge">${item.payment_id ? "Betaald" : "In verwerking"}</span>
+            </div>
+        </article>
+    `).join("");
+}
+
+function renderBookings(bookings) {
+    const container = document.getElementById("bookingsList");
+    if (!container) return;
+
+    if (!bookings.length) {
+        container.innerHTML = getEmptyState("Je hebt nog geen boekingen gemaakt.", "booking.html", "Boek een sessie");
+        return;
+    }
+
+    const statusLabels = {
+        pending: "In afwachting",
+        confirmed: "Bevestigd",
+        completed: "Afgerond",
+        cancelled: "Geannuleerd"
+    };
+
+    container.innerHTML = bookings.map((booking) => `
+        <article class="purchase-card">
+            <div class="purchase-info">
+                <h3>${escapeHtml(booking.service)}</h3>
+                <p>Tarief: ${escapeHtml(booking.duration)}</p>
+                <p>Datum: ${formatDate(booking.booking_date, booking.booking_time)}</p>
+                <p>Prijs: ${formatCurrency(booking.price)}</p>
+            </div>
+            <div class="purchase-actions">
+                <span class="badge">${escapeHtml(statusLabels[booking.status] || booking.status || "In afwachting")}</span>
+            </div>
+        </article>
+    `).join("");
+}
+
 function renderDashboard(user) {
     const purchases = Array.isArray(user.purchases) ? user.purchases : [];
+    const bookings = Array.isArray(user.bookings) ? user.bookings : [];
     const visiblePurchases = purchases.filter((item) => item.purchase_type !== "booking");
 
     // Sla actuele aankopen op zodat collections.js ze direct kan gebruiken
@@ -236,6 +291,8 @@ function renderDashboard(user) {
     renderOrders(visiblePurchases);
     renderCollections(visiblePurchases.filter((item) => item.purchase_type === "collection"));
     renderPasses(visiblePurchases.filter((item) => item.purchase_type === "pass"));
+    renderMerchandise(visiblePurchases.filter((item) => item.purchase_type === "merchandise"));
+    renderBookings(bookings);
 
     if (adminLink && Number(user.is_admin) === 1) {
         adminLink.classList.remove("hidden");
