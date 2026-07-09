@@ -15,6 +15,7 @@ loginBtn.onclick = () => {
         adminPanel.classList.remove("hidden");
         loadCollections();
         loadBookings();
+        loadDiscountCodes();
     } else {
         document.getElementById("loginError").innerText = "Wachtwoord onjuist";
     }
@@ -282,4 +283,194 @@ function loadBookings() {
         `;
     });
 }
+
+/* ============================================================
+   DISCOUNT CODES
+============================================================ */
+const DISCOUNT_CATEGORIES = ["all", "pass", "collection", "merchandise", "booking"];
+let discountRowCounter = 0;
+
+function renderDiscountRow(code) {
+    const index = discountRowCounter++;
+    const cats = code.categories || [];
+    const productsJson = JSON.stringify(code.products || []).replace(/"/g, "&quot;");
+
+    const catCheckboxes = DISCOUNT_CATEGORIES.map(cat => `
+        <label>
+            <input type="checkbox" data-field="category" value="${cat}" ${cats.includes(cat) ? "checked" : ""}>
+            ${cat}
+        </label>
+    `).join("");
+
+    return `
+        <div class="discount-box" data-index="${index}" data-original-id="${code.id || ""}" data-products="${productsJson}" data-used-count="${code.usedCount || 0}">
+            <div class="discount-box-head">
+                <h3 style="margin:0;font-size:1.04rem;">
+                    ${code.id ? code.code : "Nieuwe kortingscode"}
+                    <span class="badge ${code.active ? "active" : "inactive"}">${code.active ? "Actief" : "Inactief"}</span>
+                </h3>
+                <button class="btn btn-ghost btn-small discount-delete-btn" type="button">Verwijderen</button>
+            </div>
+            <div class="discount-grid">
+                <div>
+                    <label>Code</label>
+                    <input type="text" data-field="code" value="${code.code || ""}" placeholder="BIJV. WELCOME10">
+                </div>
+                <div>
+                    <label>Beschrijving</label>
+                    <input type="text" data-field="description" value="${code.description || ""}">
+                </div>
+                <div>
+                    <label>Type</label>
+                    <select data-field="type">
+                        <option value="percentage" ${code.type === "percentage" ? "selected" : ""}>Percentage (%)</option>
+                        <option value="fixed" ${code.type === "fixed" ? "selected" : ""}>Vast bedrag (€)</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Waarde</label>
+                    <input type="number" step="0.01" min="0" data-field="value" value="${code.value ?? 0}">
+                </div>
+                <div>
+                    <label>Minimumbedrag (€)</label>
+                    <input type="number" step="0.01" min="0" data-field="minAmount" value="${code.minAmount ?? 0}">
+                </div>
+                <div>
+                    <label>Max. aantal keer te gebruiken (leeg = onbeperkt)</label>
+                    <input type="number" step="1" min="0" data-field="maxUses" value="${code.maxUses ?? ""}">
+                </div>
+                <div>
+                    <label>Vervaldatum (leeg = verloopt nooit)</label>
+                    <input type="date" data-field="expiryDate" value="${code.expiryDate || ""}">
+                </div>
+                <div>
+                    <label>Al gebruikt</label>
+                    <input type="number" value="${code.usedCount || 0}" disabled>
+                </div>
+                <div style="grid-column: 1 / -1;">
+                    <label>Geldig voor</label>
+                    <div class="discount-categories">${catCheckboxes}</div>
+                </div>
+                <div>
+                    <label style="display:flex;align-items:center;gap:8px;">
+                        <input type="checkbox" data-field="active" style="width:16px;height:16px;" ${code.active ? "checked" : ""}>
+                        Actief
+                    </label>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+async function loadDiscountCodes() {
+    const container = document.getElementById("discountList");
+    container.innerHTML = "";
+    discountRowCounter = 0;
+
+    try {
+        const res = await fetch("includes/discount-codes.json");
+        const data = await res.json();
+        const codes = data.codes || [];
+
+        if (codes.length === 0) {
+            container.innerHTML = '<p class="empty-state">Nog geen kortingscodes. Klik op "+ Nieuwe code".</p>';
+            return;
+        }
+
+        codes.forEach(code => {
+            container.innerHTML += renderDiscountRow(code);
+        });
+    } catch (error) {
+        console.error("Error loading discount codes:", error);
+        container.innerHTML = '<p class="empty-state">Kon kortingscodes niet laden.</p>';
+    }
+}
+
+document.getElementById("addDiscountBtn").onclick = () => {
+    const container = document.getElementById("discountList");
+    const emptyState = container.querySelector(".empty-state");
+    if (emptyState) emptyState.remove();
+
+    container.insertAdjacentHTML("beforeend", renderDiscountRow({
+        code: "",
+        type: "percentage",
+        value: 0,
+        description: "",
+        active: true,
+        categories: ["all"],
+        products: [],
+        minAmount: 0,
+        maxUses: null,
+        usedCount: 0,
+        expiryDate: null
+    }));
+};
+
+document.getElementById("discountList").addEventListener("click", (e) => {
+    if (e.target.classList.contains("discount-delete-btn")) {
+        e.target.closest(".discount-box").remove();
+    }
+});
+
+document.getElementById("saveDiscountsBtn").onclick = async () => {
+    try {
+        const boxes = document.querySelectorAll("#discountList .discount-box");
+        const codes = [];
+
+        for (const box of boxes) {
+            const code = box.querySelector('[data-field="code"]').value.trim().toUpperCase();
+            if (!code) {
+                alert("❌ Elke kortingscode moet een code hebben.");
+                return;
+            }
+
+            const type = box.querySelector('[data-field="type"]').value;
+            const value = parseFloat(box.querySelector('[data-field="value"]').value) || 0;
+            const description = box.querySelector('[data-field="description"]').value;
+            const minAmount = parseFloat(box.querySelector('[data-field="minAmount"]').value) || 0;
+            const maxUsesRaw = box.querySelector('[data-field="maxUses"]').value;
+            const maxUses = maxUsesRaw === "" ? null : parseInt(maxUsesRaw, 10);
+            const expiryDateRaw = box.querySelector('[data-field="expiryDate"]').value;
+            const expiryDate = expiryDateRaw === "" ? null : expiryDateRaw;
+            const active = box.querySelector('[data-field="active"]').checked;
+            const categories = Array.from(box.querySelectorAll('[data-field="category"]:checked')).map(cb => cb.value);
+            const products = JSON.parse(box.dataset.products || "[]");
+            const usedCount = parseInt(box.dataset.usedCount || "0", 10);
+            const originalId = box.dataset.originalId;
+
+            codes.push({
+                id: originalId || code,
+                code,
+                type,
+                value,
+                description,
+                active,
+                categories: categories.length ? categories : ["all"],
+                products,
+                minAmount,
+                maxUses,
+                usedCount,
+                expiryDate
+            });
+        }
+
+        const saveRes = await fetch("includes/discount-admin-save.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ codes })
+        });
+
+        const saveData = await saveRes.json();
+
+        if (saveData.success) {
+            alert("✅ Kortingscodes succesvol opgeslagen!");
+            loadDiscountCodes();
+        } else {
+            alert("❌ Fout bij opslaan: " + (saveData.error || "Onbekende fout"));
+        }
+    } catch (error) {
+        console.error("Save discount codes error:", error);
+        alert("❌ Er is een fout opgetreden: " + error.message);
+    }
+};
 

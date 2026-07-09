@@ -2,6 +2,74 @@
 
 header('Content-Type: application/json; charset=utf-8');
 
+// Valideert een kortingscode server-side tegen discount-codes.json en berekent
+// het kortingsbedrag zelf opnieuw — vertrouwt nooit een door de klant aangeleverd bedrag.
+function validateDiscountCode($code, array $items) {
+    $file = __DIR__ . '/discount-codes.json';
+    if (!file_exists($file)) {
+        return ['valid' => false, 'error' => 'Kortingscodes zijn niet beschikbaar.'];
+    }
+
+    $data = json_decode(file_get_contents($file), true);
+    $codes = $data['codes'] ?? [];
+    $match = null;
+    foreach ($codes as $c) {
+        if (isset($c['code']) && strcasecmp($c['code'], $code) === 0) {
+            $match = $c;
+            break;
+        }
+    }
+
+    if (!$match || empty($match['active'])) {
+        return ['valid' => false, 'error' => 'Deze kortingscode bestaat niet of is niet meer geldig.'];
+    }
+    if (!empty($match['expiryDate']) && strtotime($match['expiryDate']) < strtotime('today')) {
+        return ['valid' => false, 'error' => 'Deze kortingscode is verlopen.'];
+    }
+    if (isset($match['maxUses']) && $match['maxUses'] !== null && ($match['usedCount'] ?? 0) >= $match['maxUses']) {
+        return ['valid' => false, 'error' => 'Deze kortingscode is al te vaak gebruikt.'];
+    }
+
+    $categories = $match['categories'] ?? [];
+    $products = $match['products'] ?? [];
+    $subtotal = 0;
+    $applicableSubtotal = 0;
+
+    foreach ($items as $item) {
+        if (!is_array($item)) {
+            continue;
+        }
+        $price = isset($item['price']) ? floatval($item['price']) : 0;
+        $subtotal += $price;
+
+        $applies = in_array('all', $categories, true)
+            || (isset($item['type']) && in_array($item['type'], $categories, true))
+            || (isset($item['id']) && in_array($item['id'], $products, true));
+
+        if ($applies) {
+            $applicableSubtotal += $price;
+        }
+    }
+
+    if (!empty($match['minAmount']) && $subtotal < floatval($match['minAmount'])) {
+        return ['valid' => false, 'error' => 'Deze kortingscode is pas geldig vanaf €' . number_format($match['minAmount'], 2, ',', '.') . '.'];
+    }
+    if ($applicableSubtotal <= 0) {
+        return ['valid' => false, 'error' => 'Deze kortingscode is niet van toepassing op je winkelmandje.'];
+    }
+
+    $discountAmount = $match['type'] === 'percentage'
+        ? $applicableSubtotal * (floatval($match['value']) / 100)
+        : min(floatval($match['value']), $applicableSubtotal);
+
+    return [
+        'valid' => true,
+        'code' => $match['code'],
+        'discount' => round($discountAmount, 2),
+        'subtotal' => round($subtotal, 2)
+    ];
+}
+
 // MOLLIE API KEYS
 $isTestMode = (isset($_SERVER['HTTP_HOST']) && (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false));
 $apiKey = $isTestMode ? "test_YOUR_MOLLIE_TEST_KEY_HERE" : "live_KT2n6pBqcEwWjUdbEc9dEGxnxK26KB";
@@ -72,6 +140,31 @@ if (is_string($items)) {
     $itemsArray = $items;
 }
 
+$discountCode = !empty($data["discount_code"]) ? trim((string) $data["discount_code"]) : null;
+$discountResult = null;
+
+if (!empty($discountCode)) {
+    $discountResult = validateDiscountCode($discountCode, $itemsArray);
+    if (!$discountResult['valid']) {
+        http_response_code(400);
+        echo json_encode([
+            "paymentUrl" => null,
+            "error" => $discountResult['error']
+        ]);
+        exit;
+    }
+
+    $expectedAmount = round($discountResult['subtotal'] - $discountResult['discount'], 2);
+    if (abs($expectedAmount - $amountValue) > 0.01) {
+        http_response_code(400);
+        echo json_encode([
+            "paymentUrl" => null,
+            "error" => "Het totaalbedrag klopt niet met de toegepaste kortingscode. Ververs de pagina en probeer opnieuw."
+        ]);
+        exit;
+    }
+}
+
 $containsOnlyTestItems = !empty($itemsArray) && count(array_filter($itemsArray, function ($item) {
     return !is_array($item) || (($item['type'] ?? '') !== 'test');
 })) === 0;
@@ -131,7 +224,9 @@ $paymentData = [
         "items" => $items,
         "booking_info" => $bookingInfo,
         "customer_data" => $customerData,
-        "testMode" => $testMode ? "true" : "false"
+        "testMode" => $testMode ? "true" : "false",
+        "discount_code" => $discountResult ? $discountResult['code'] : null,
+        "discount_amount" => $discountResult ? number_format($discountResult['discount'], 2, '.', '') : null
     ]
 ];
 

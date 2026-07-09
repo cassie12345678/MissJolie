@@ -16,6 +16,40 @@ function columnExists(PDO $pdo, string $tableName, string $columnName): bool {
     }
 }
 
+// Hoogt usedCount van een kortingscode met 1 op in discount-codes.json.
+// Gebruikt flock() om gelijktijdige schrijfacties (meerdere betalingen tegelijk) veilig te maken.
+function incrementDiscountCodeUsage(string $code): void {
+    $file = __DIR__ . '/discount-codes.json';
+    $handle = @fopen($file, 'c+');
+    if (!$handle) {
+        return;
+    }
+
+    if (flock($handle, LOCK_EX)) {
+        $contents = stream_get_contents($handle);
+        $data = json_decode($contents, true);
+        $codes = $data['codes'] ?? [];
+
+        foreach ($codes as &$c) {
+            if (isset($c['code']) && strcasecmp($c['code'], $code) === 0) {
+                $c['usedCount'] = (int) ($c['usedCount'] ?? 0) + 1;
+                break;
+            }
+        }
+        unset($c);
+
+        $data['codes'] = $codes;
+
+        ftruncate($handle, 0);
+        rewind($handle);
+        fwrite($handle, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+        fflush($handle);
+        flock($handle, LOCK_UN);
+    }
+
+    fclose($handle);
+}
+
 $paymentId = $_POST["id"] ?? null;
 
 if (empty($paymentId)) {
@@ -78,6 +112,9 @@ if ($paymentStatus === 'paid') {
             $rawCustomerData = $metadata["customer_data"] ?? null;
             $customerData = is_string($rawCustomerData) ? json_decode($rawCustomerData, true) : (is_array($rawCustomerData) ? $rawCustomerData : null);
 
+            $discountCode = !empty($metadata["discount_code"]) ? $metadata["discount_code"] : null;
+            $discountAmount = isset($metadata["discount_amount"]) ? floatval($metadata["discount_amount"]) : 0;
+
             if (!is_array($items)) {
                 $items = [];
             }
@@ -131,9 +168,9 @@ if ($paymentStatus === 'paid') {
                 $inserted = false;
 
                 try {
-                    $stmt = $pdo->prepare(" 
-                        INSERT INTO purchases (user_id, purchase_type, item_id, item_name, price, payment_id, payment_status) 
-                        VALUES (?, ?, ?, ?, ?, ?, 'paid')
+                    $stmt = $pdo->prepare("
+                        INSERT INTO purchases (user_id, purchase_type, item_id, item_name, price, payment_id, payment_status, discount_code, discount_amount)
+                        VALUES (?, ?, ?, ?, ?, ?, 'paid', ?, ?)
                     ");
                     $stmt->execute([
                         $userId,
@@ -141,11 +178,33 @@ if ($paymentStatus === 'paid') {
                         $itemId,
                         $itemName,
                         $itemPrice,
-                        $paymentId
+                        $paymentId,
+                        $discountCode,
+                        $discountAmount
                     ]);
                     $inserted = true;
                 } catch (Throwable $e) {
-                    // Fallback below.
+                    // discount_code/discount_amount kolommen bestaan mogelijk nog niet, val terug.
+                }
+
+                if (!$inserted) {
+                    try {
+                        $stmt = $pdo->prepare("
+                            INSERT INTO purchases (user_id, purchase_type, item_id, item_name, price, payment_id, payment_status)
+                            VALUES (?, ?, ?, ?, ?, ?, 'paid')
+                        ");
+                        $stmt->execute([
+                            $userId,
+                            $itemType,
+                            $itemId,
+                            $itemName,
+                            $itemPrice,
+                            $paymentId
+                        ]);
+                        $inserted = true;
+                    } catch (Throwable $e) {
+                        // Fallback below.
+                    }
                 }
 
                 if (!$inserted) {
@@ -381,6 +440,17 @@ if ($paymentStatus === 'paid') {
                             );
                         }
                     }
+                }
+            }
+
+            if (!empty($discountCode)) {
+                try {
+                    incrementDiscountCodeUsage($discountCode);
+                } catch (Throwable $e) {
+                    file_put_contents("mollie-log.txt",
+                        date("Y-m-d H:i:s") . " | Payment $paymentId | Discount usage update ERROR: " . $e->getMessage() . "\n",
+                        FILE_APPEND
+                    );
                 }
             }
 

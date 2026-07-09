@@ -20,6 +20,99 @@ if (userEmail) {
 }
 
 /* ============================================================
+   DISCOUNT CODE
+============================================================ */
+let appliedDiscount = null; // { code, type, value, categories, products, amount }
+
+function getCartSubtotal() {
+    return cart.reduce((sum, item) => sum + parseFloat(item.price), 0);
+}
+
+function itemMatchesDiscount(item, discount) {
+    const categories = discount.categories || [];
+    const products = discount.products || [];
+    if (categories.includes('all')) return true;
+    if (categories.includes(item.type)) return true;
+    if (products.includes(item.id)) return true;
+    return false;
+}
+
+function computeDiscountAmount(discount) {
+    const applicableItems = cart.filter(item => itemMatchesDiscount(item, discount));
+    const applicableSubtotal = applicableItems.reduce((sum, item) => sum + parseFloat(item.price), 0);
+
+    if (applicableSubtotal <= 0) return 0;
+
+    if (discount.type === 'percentage') {
+        return applicableSubtotal * (discount.value / 100);
+    }
+    // fixed amount, capped at the applicable subtotal
+    return Math.min(discount.value, applicableSubtotal);
+}
+
+async function applyDiscountCode(rawCode) {
+    const messageEl = document.getElementById("discountCodeMessage");
+    const code = (rawCode || "").trim().toUpperCase();
+
+    messageEl.className = "";
+    messageEl.textContent = "";
+
+    if (!code) {
+        appliedDiscount = null;
+        displayCartSummary();
+        return;
+    }
+
+    try {
+        const res = await fetch("includes/discount-codes.json");
+        const data = await res.json();
+        const codes = data.codes || [];
+        const match = codes.find(c => (c.code || "").toUpperCase() === code);
+
+        if (!match || !match.active) {
+            throw new Error("Deze kortingscode bestaat niet of is niet meer geldig.");
+        }
+        if (match.expiryDate && new Date(match.expiryDate) < new Date()) {
+            throw new Error("Deze kortingscode is verlopen.");
+        }
+        if (match.maxUses !== null && match.usedCount >= match.maxUses) {
+            throw new Error("Deze kortingscode is al te vaak gebruikt.");
+        }
+        const subtotal = getCartSubtotal();
+        if (match.minAmount && subtotal < match.minAmount) {
+            throw new Error(`Deze kortingscode is pas geldig vanaf €${match.minAmount.toFixed(2)}.`);
+        }
+
+        const discountAmount = computeDiscountAmount(match);
+        if (discountAmount <= 0) {
+            throw new Error("Deze kortingscode is niet van toepassing op je winkelmandje.");
+        }
+
+        appliedDiscount = {
+            code: match.code,
+            type: match.type,
+            value: match.value,
+            categories: match.categories,
+            products: match.products,
+            amount: discountAmount
+        };
+
+        messageEl.textContent = `Kortingscode "${match.code}" toegepast!`;
+        messageEl.className = "success";
+    } catch (error) {
+        appliedDiscount = null;
+        messageEl.textContent = error.message || "Kon kortingscode niet toepassen.";
+        messageEl.className = "error";
+    }
+
+    displayCartSummary();
+}
+
+document.getElementById("applyDiscountBtn").addEventListener("click", () => {
+    applyDiscountCode(document.getElementById("discountCodeInput").value);
+});
+
+/* ============================================================
    DISPLAY CART SUMMARY
 ============================================================ */
 function displayCartSummary() {
@@ -48,11 +141,23 @@ function displayCartSummary() {
         }
     });
 
+    let finalTotal = total;
+
+    if (appliedDiscount) {
+        finalTotal = Math.max(0, total - appliedDiscount.amount);
+        html += `
+            <div class="summary-item discount-row">
+                <span>Korting (${appliedDiscount.code}):</span>
+                <span>-€${appliedDiscount.amount.toFixed(2)}</span>
+            </div>
+        `;
+    }
+
     html += `
         <div class="summary-total">
             <div class="summary-item">
                 <span>Totaal:</span>
-                <span>€${total.toFixed(2)}</span>
+                <span>€${finalTotal.toFixed(2)}</span>
             </div>
         </div>
     `;
@@ -94,7 +199,8 @@ document.getElementById("checkoutForm").addEventListener("submit", async (e) => 
     submitBtn.disabled = true;
     submitBtn.textContent = "Bezig met verwerken...";
 
-    const total = cart.reduce((sum, item) => sum + parseFloat(item.price), 0);
+    const total = getCartSubtotal();
+    const finalAmount = appliedDiscount ? Math.max(0, total - appliedDiscount.amount) : total;
     const userId = localStorage.getItem("userId");
 
     try {
@@ -102,7 +208,8 @@ document.getElementById("checkoutForm").addEventListener("submit", async (e) => 
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-                amount: total.toFixed(2),
+                amount: finalAmount.toFixed(2),
+                discount_code: appliedDiscount ? appliedDiscount.code : null,
                 user_id: userId,
                 customer_data: customerData,
                 items: cart.map(item => ({

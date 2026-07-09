@@ -871,6 +871,44 @@ body::after {
     font-weight: 700;
 }
 
+.summary-item.discount-row {
+    color: #6fd68a;
+}
+
+.discount-code-box {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.discount-code-box label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d7d7de;
+}
+
+.discount-code-row {
+    display: flex;
+    gap: 10px;
+}
+
+.discount-code-row input {
+    flex: 1;
+}
+
+#discountCodeMessage {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+
+#discountCodeMessage.success {
+    color: #6fd68a;
+}
+
+#discountCodeMessage.error {
+    color: #ff8080;
+}
+
 .account-shell,
 .bio-shell {
     max-width: 1320px;

@@ -55,6 +55,20 @@
       "maxUses": null,
       "usedCount": 0,
       "expiryDate": null
+    },
+    {
+      "id": "KORTING15",
+      "code": "KORTING15",
+      "type": "fixed",
+      "value": 15,
+      "description": "€15 korting op je hele bestelling",
+      "active": true,
+      "categories": ["all"],
+      "products": [],
+      "minAmount": 0,
+      "maxUses": null,
+      "usedCount": 0,
+      "expiryDate": null
     }
   ]
 }
