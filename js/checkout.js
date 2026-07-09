@@ -64,7 +64,7 @@ async function applyDiscountCode(rawCode) {
     }
 
     try {
-        const res = await fetch("includes/discount-codes.json");
+        const res = await fetch("includes/discount-codes.json?t=" + Date.now(), { cache: "no-store" });
         const data = await res.json();
         const codes = data.codes || [];
         const match = codes.find(c => (c.code || "").toUpperCase() === code);
