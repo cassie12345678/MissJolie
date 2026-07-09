@@ -284,76 +284,10 @@ async function proceedToCheckout() {
         return;
     }
 
-    // Passes hebben een Snapchat gebruikersnaam nodig en boekingen hebben
-    // naam/e-mail/telefoon nodig - haal die eerst op via checkout.html
-    const needsCheckoutForm = cart.some(item => item.type === 'pass' || item.type === 'booking');
-    if (needsCheckoutForm) {
-        localStorage.setItem('pendingCheckout', 'true');
-        window.location.href = 'checkout.html';
-        return;
-    }
-
-    // User is ingelogd, start checkout proces
-    const total = cart.reduce((sum, item) => sum + parseFloat(item.price), 0);
-    const userId = localStorage.getItem('userId');
-    
-    // Disable button tijdens processing
-    const checkoutBtn = document.getElementById('checkoutBtn');
-    checkoutBtn.disabled = true;
-    checkoutBtn.textContent = strings[currentLang]?.button_processing || '⏳ Bezig...';
-    
-    try {
-        // Haal klantnaam/email op uit localStorage als beschikbaar
-        const savedCustomer = (() => {
-            try { return JSON.parse(localStorage.getItem('customerData') || 'null'); } catch { return null; }
-        })();
-        const customerData = savedCustomer || {
-            email: localStorage.getItem('userEmail') || null
-        };
-
-        // Roep checkout.php aan
-        const response = await fetch('includes/checkout.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                amount: total.toFixed(2),
-                user_id: userId,
-                customer_data: customerData,
-                items: cart.map(item => ({
-                    type: item.type,
-                    id: item.id,
-                    name: item.name,
-                    tier: item.tier || null,
-                    description: item.description || null,
-                    price: item.price,
-                    date: item.date || null,
-                    time: item.time || null,
-                    notes: item.notes || null
-                }))
-            })
-        });
-        
-        const data = await response.json();
-        
-        if (data.paymentUrl) {
-            // Sla payment ID op als fallback voor als webhook faalt
-            if (data.paymentId) {
-                localStorage.setItem('pendingPaymentId', data.paymentId);
-            }
-            // Redirect naar Mollie
-            window.location.href = data.paymentUrl;
-        } else {
-            throw new Error('Geen payment URL ontvangen');
-        }
-        
-    } catch (error) {
-        console.error('Checkout error:', error);
-        showNotification(strings[currentLang]?.notification_checkout_error || 'Er ging iets fout bij het afrekenen. Probeer het opnieuw.', 'error');
-        checkoutBtn.disabled = false;
-        checkoutBtn.textContent = strings[currentLang]?.button_checkout || '💳 Afrekenen';
-    }
+    // Altijd via checkout.html: daar worden klantgegevens verzameld en kan een
+    // kortingscode worden toegepast voordat er naar Mollie wordt doorgestuurd.
+    localStorage.setItem('pendingCheckout', 'true');
+    window.location.href = 'checkout.html';
 }
 
 /* ============================================================
